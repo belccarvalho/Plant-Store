@@ -82,14 +82,14 @@ const reducer = (state = initialState, action) => {
       let itemIncreased = state.basket.order.map((item) => {
         if (item.title === action.payload.name) {
           itemExist = true;
-          item.quantity = item.quantity + 1;
+          item.quantity++;
         }
         return item;
       });
       //decrease product from stock
       let productsStockUpdated = state.products.map((product) => {
         if (product.name === action.payload.name) {
-          product.stock = product.stock - 1;
+          product.stock--;
         }
         return product;
       });

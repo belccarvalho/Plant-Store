@@ -24,7 +24,7 @@ export default function NavbarDisplay() {
 
   return (
     <Router>
-      {/* Define navigationbar */}
+      {/* Define navbar */}
       <Navbar
         className="p-5"
         style={{ backgroundColor: "rgb(183,200,151)" }}
