@@ -26,13 +26,13 @@ export default function NavbarDisplay() {
     <Router>
       {/* Define navbar */}
       <Navbar
-        className="p-5"
+        className='p-5'
         style={{ backgroundColor: "rgb(183,200,151)" }}
         light
-        expand="md"
+        expand='md'
       >
         <NavbarBrand
-          href="/"
+          href='/'
           style={{ color: "rgb(214,131,141)", fontSize: "2rem" }}
         >
           My Online Shop
@@ -43,19 +43,19 @@ export default function NavbarDisplay() {
           onClick={toggle}
         />
         <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar>
-            <NavItem tag="h3">
-              <Link className="nav-link" to="/home">
+          <Nav className='mr-auto' navbar>
+            <NavItem tag='h3'>
+              <Link className='nav-link' to='/home'>
                 Home
               </Link>
             </NavItem>
-            <NavItem tag="h3">
-              <Link className="nav-link" to="/shop">
+            <NavItem tag='h3'>
+              <Link className='nav-link' to='/shop'>
                 Shop
               </Link>
             </NavItem>
-            <NavItem tag="h3">
-              <Link className="nav-link" to="/orders">
+            <NavItem tag='h3'>
+              <Link className='nav-link' to='/orders'>
                 Orders
               </Link>
             </NavItem>
@@ -63,8 +63,8 @@ export default function NavbarDisplay() {
           <NavbarText>
             <Link
               style={{ color: "rgba(0,0,0,.6)", fontSize: "1.5rem" }}
-              className="nav-link"
-              to="/orders"
+              className='nav-link'
+              to='/orders'
             >
               {basketCounter}
               <TiShoppingCart
@@ -79,13 +79,13 @@ export default function NavbarDisplay() {
         </Collapse>
       </Navbar>
       <Switch>
-        <Route path="/home">
+        <Route path='/home'>
           <Home />
         </Route>
-        <Route path="/shop">
+        <Route path='/shop'>
           <ListOfProducts />
         </Route>
-        <Route path="/orders">
+        <Route path='/orders'>
           <Orders />
         </Route>
       </Switch>

@@ -28,35 +28,26 @@ export default function Product(props) {
 
   return (
     <div key={props.product.id}>
-      <Card
-        body
-        outline
-        color="success"
-        width="100%"
-        height="200px"
-      >
+      <Card body outline color='success' width='100%' height='200px'>
         <CardImg
-          style={{ objectFit: "contain"}}
+          style={{ objectFit: "contain" }}
           top
-          width="100%"
-          height="300px"
+          width='100%'
+          height='300px'
           src={props.product.image}
-          alt="Card image cap"
+          alt='Card image cap'
         />
-        <CardBody className="text-center">
-          <CardTitle style={{ color: "rgb(214,131,141)" }} tag="h4">
+        <CardBody className='text-center'>
+          <CardTitle style={{ color: "rgb(214,131,141)" }} tag='h4'>
             {props.product.name}
           </CardTitle>
 
-          <CardText className="m-2" tag="h5">
+          <CardText className='m-2' tag='h5'>
             Price: {props.product.price}€
           </CardText>
-          <CardText className="m-2" tag="h5">
-            Stock: {props.product.stock}Units
-          </CardText>
-          <div className="d-flex inline-flex justify-content-center">
+          <div className='d-flex inline-flex justify-content-center'>
             <Button
-              className="col-2 button"
+              className='col-2 button'
               onClick={() => {
                 dispatch(remove(props.product));
               }}
@@ -64,13 +55,13 @@ export default function Product(props) {
               -
             </Button>
             <Input
-              className="col-2 mx-2 text-center"
+              className='col-2 mx-2 text-center'
               disabled
-              type="number"
+              type='number'
               // value={}
             />
             <Button
-              className="col-2 button"
+              className='col-2 button'
               onClick={() => {
                 dispatch(add(props.product.name, props.product.price));
               }}
