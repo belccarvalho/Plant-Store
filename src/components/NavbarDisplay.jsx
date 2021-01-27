@@ -11,9 +11,9 @@ import {
 } from "reactstrap";
 import { TiShoppingCart } from "react-icons/ti";
 import { RiPlantFill } from "react-icons/ri";
-import ListOfProducts from "../products/ListOfProducts";
-import Orders from "../orders/orders";
-import Home from "../home/home";
+import ListOfProducts from "./products/ListOfProducts";
+import Orders from "./orders/orders";
+import Home from "./home";
 import { useSelector } from "react-redux";
 
 export default function NavbarDisplay() {
@@ -26,20 +26,28 @@ export default function NavbarDisplay() {
     <Router>
       {/* Define navbar */}
       <Navbar
-        className='p-5'
-        style={{ backgroundColor: "rgb(183,200,151)" }}
+        className='navbar p-3S'
+        style={{
+          backgroundImage:
+            "https://images.unsplash.com/photo-1485841890310-6a055c88698a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max",
+          backgroundColor: "rgb(183,200,151)",
+        }}
         light
         expand='md'
       >
         <NavbarBrand
           href='/'
-          style={{ color: "rgb(214,131,141)", fontSize: "2rem" }}
+          style={{
+            color: "var(--pink)",
+            fontSize: "2rem",
+            marginBottom: "1em",
+          }}
         >
           My Online Shop
           <RiPlantFill style={{ width: "4rem", height: "4rem" }} />{" "}
         </NavbarBrand>
         <NavbarToggler
-          style={{ border: "2px solid rgb(214,131,141)" }}
+          style={{ border: "2px solid var(--pink)" }}
           onClick={toggle}
         />
         <Collapse isOpen={isOpen} navbar>
@@ -62,7 +70,11 @@ export default function NavbarDisplay() {
           </Nav>
           <NavbarText>
             <Link
-              style={{ color: "rgba(0,0,0,.6)", fontSize: "1.5rem" }}
+              style={{
+                color: "rgba(0,0,0,.6)",
+                fontSize: "2rem",
+                marginBottom: "1em",
+              }}
               className='nav-link'
               to='/orders'
             >
@@ -71,7 +83,7 @@ export default function NavbarDisplay() {
                 style={{
                   width: "4rem",
                   height: "4rem",
-                  color: "rgb(214,131,141)",
+                  color: "var(--pink)",
                 }}
               />
             </Link>

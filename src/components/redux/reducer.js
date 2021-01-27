@@ -3,7 +3,7 @@ const initialState = {
   products: [
     {
       id: 0,
-      name: "Chinese Money Plant",
+      name: "Chinese Money",
       price: 9,
       image:
         "https://mk0newsiteviodqfcuwv.kinstacdn.com/wp-content/uploads/2020/10/Pilea_2-600x840.jpg",
@@ -11,10 +11,10 @@ const initialState = {
     },
     {
       id: 1,
-      name: "Maranta Leuconeura",
-      price: 12,
+      name: "Jesmonite Planter",
+      price: 9,
       image:
-        "https://mk0newsiteviodqfcuwv.kinstacdn.com/wp-content/uploads/2019/08/Plant-Circle_24-Jan-2020_Photo-by-Savannah-van-der-Niet-43.jpg",
+        "https://mk0newsiteviodqfcuwv.kinstacdn.com/wp-content/uploads/2020/10/20201022-_DSC0635-1.jpg",
       stock: 7,
     },
     {
@@ -35,26 +35,26 @@ const initialState = {
     },
     {
       id: 4,
-      name: "Lemon Lime",
-      price: 11,
+      name: "Hoya Lanceolata",
+      price: 25,
       image:
-        "https://mk0newsiteviodqfcuwv.kinstacdn.com/wp-content/uploads/2018/09/Plant-Circle_2-August-2019_Photo-by-Savannah-van-der-Niet-42.jpg",
+        "https://mk0newsiteviodqfcuwv.kinstacdn.com/wp-content/uploads/2019/04/20200409-DSC_4987.jpg",
       stock: 13,
     },
     {
       id: 5,
-      name: "Scindapsus Pictus",
-      price: 10,
+      name: "Calathea Vittata",
+      price: 16,
       image:
-        "https://mk0newsiteviodqfcuwv.kinstacdn.com/wp-content/uploads/2019/06/Plant-Circle_25-June-2019_Photo-by-Savannah-van-der-Niet-28.jpg",
+        "https://mk0newsiteviodqfcuwv.kinstacdn.com/wp-content/uploads/2020/05/20200528-DSC_7917.jpg",
       stock: 12,
     },
     {
       id: 6,
-      name: "Tiger-Pfeilblat",
+      name: "Ph. Birkin",
       price: 17,
       image:
-        "https://mk0newsiteviodqfcuwv.kinstacdn.com/wp-content/uploads/2018/09/Plant-Circle_24-Jan-2020_Photo-by-Savannah-van-der-Niet-118.jpg",
+        "https://mk0newsiteviodqfcuwv.kinstacdn.com/wp-content/uploads/2019/10/20200423-DSC_5998.jpg",
       stock: 10,
     },
     {

@@ -1,43 +1,54 @@
-.cardWrapper {
-  grid-gap: 2px;
+.display-products {
+  display: flex;
+  justify-content: center;
 }
-@media only screen and (max-width: 424px) {
+.cardWrapper {
+  grid-gap: 1em;
+}
+@media only screen and (min-width: 424px) {
   .cardWrapper {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
+
+    margin: 1em 0.5em;
   }
   h4 {
     font-size: 20px;
   }
 }
 
-@media only screen and (min-width: 425px) {
-  .cardWrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-  }
-}
-
 @media only screen and (min-width: 768px) {
   .cardWrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
+    margin: 2em;
+    margin-bottom: 5rem;
   }
-  h5{
-      font-size: 14px;
+  h5 {
+    font-size: 14px;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .cardWrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
   }
 }
 .button {
-  background-color: rgb(14,69,68);
+  background-color: rgb(14, 69, 68);
+}
+
+@media only screen and (min-width: 1200px) {
+  .cardWrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+  }
+}
+.button {
+  background-color: rgb(14, 69, 68);
 }

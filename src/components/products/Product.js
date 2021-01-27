@@ -28,7 +28,7 @@ export default function Product(props) {
 
   return (
     <div key={props.product.id}>
-      <Card body outline color='success' width='100%' height='200px'>
+      <Card body width='100%' height='200px'>
         <CardImg
           style={{ objectFit: "contain" }}
           top
