@@ -13,7 +13,6 @@ import { TiShoppingCart } from "react-icons/ti";
 import { RiPlantFill } from "react-icons/ri";
 import ListOfProducts from "./products/ListOfProducts";
 import Orders from "./orders/orders";
-import Home from "./home";
 import { useSelector } from "react-redux";
 
 export default function NavbarDisplay() {
@@ -43,7 +42,7 @@ export default function NavbarDisplay() {
             marginBottom: "1em",
           }}
         >
-          My Online Shop
+          Online-Shop
           <RiPlantFill style={{ width: "4rem", height: "4rem" }} />{" "}
         </NavbarBrand>
         <NavbarToggler
@@ -51,14 +50,9 @@ export default function NavbarDisplay() {
           onClick={toggle}
         />
         <Collapse isOpen={isOpen} navbar>
-          <Nav className='mr-auto' navbar>
+          <Nav className='mr-auto pl-5' navbar>
             <NavItem tag='h3'>
-              <Link className='nav-link' to='/home'>
-                Home
-              </Link>
-            </NavItem>
-            <NavItem tag='h3'>
-              <Link className='nav-link' to='/shop'>
+              <Link className='nav-link' to='/'>
                 Shop
               </Link>
             </NavItem>
@@ -91,12 +85,7 @@ export default function NavbarDisplay() {
         </Collapse>
       </Navbar>
       <Switch>
-        <Route path='/home'>
-          <Home />
-        </Route>
-        <Route path='/shop'>
-          <ListOfProducts />
-        </Route>
+        <Route path='/'></Route>
         <Route path='/orders'>
           <Orders />
         </Route>
