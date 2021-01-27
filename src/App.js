@@ -1,11 +1,12 @@
-import NavbarDisplay from "./components/navbar/NavbarDisplay"
-import React from 'react'
+import NavbarDisplay from "./components/NavbarDisplay";
+import React from "react";
+import Footer from "./components/footer";
 
 export default function App() {
   return (
     <div>
-       <NavbarDisplay/>
+      <NavbarDisplay />
+      <Footer />
     </div>
-  )
+  );
 }
-
