@@ -1,13 +1,60 @@
-body {
+:root {
+  --pink: rgb(214, 131, 141);
+  --white: rgb(245, 246, 248);
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--white);
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.navbar {
+  background-image: url(https://images.unsplash.com/photo-1485841890310-6a055c88698a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max);
+  background-size: contain;
+  height: 25vh;
+}
+.nav-link {
+  color: var(--pink) !important;
+}
+.home {
+  background-image: url(https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.card {
+  background-color: var(--white);
+  border: rgb(179, 198, 142) solid 3px;
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.2),
+    -3px -3px 7px rgba(255, 255, 255, 0.2);
+}
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(179, 198, 142);
+  font-size: 12px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  padding: 1em;
+}
+footer p {
+  margin: 0;
+  font-style: italic;
+}
+footer p > a {
+  color: black;
+}
+footer p > a:hover {
+  color: rgb(214, 131, 141);
 }
