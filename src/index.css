@@ -32,12 +32,7 @@ code {
 .home {
   background-color: var(--white);
 }
-.card {
-  background-color: var(--white);
-  border: var(--green) solid 3px;
-  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.2),
-    -3px -3px 7px rgba(255, 255, 255, 0.2);
-}
+
 footer {
   display: flex;
   justify-content: center;
@@ -56,5 +51,5 @@ footer p > a {
   color: black;
 }
 footer p > a:hover {
-  color: rgb(214, 131, 141);
+  color: var(--pink);
 }

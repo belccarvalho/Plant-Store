@@ -5,6 +5,17 @@
 .cardWrapper {
   grid-gap: 1em;
 }
+.card {
+  background-color: var(--white);
+  border: var(--green) solid 3px;
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.2),
+    -3px -3px 7px rgba(255, 255, 255, 0.2);
+  padding: 0.5em;
+}
+.card-body {
+  padding: 0.5em;
+}
+
 @media only screen and (min-width: 424px) {
   .cardWrapper {
     display: grid;

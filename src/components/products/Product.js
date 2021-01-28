@@ -10,6 +10,7 @@ import {
 } from "reactstrap";
 import { useDispatch } from "react-redux";
 import { remove, add } from "../redux/actions";
+import "./products.css";
 // import { useSelector } from "react-redux";
 export default function Product(props) {
   // const ordersDone = useSelector((state) => {
@@ -38,7 +39,7 @@ export default function Product(props) {
           alt='Card image cap'
         />
         <CardBody className='text-center'>
-          <CardTitle style={{ color: "rgb(214,131,141)" }} tag='h4'>
+          <CardTitle style={{ color: "var(--pink)" }} tag='h4'>
             {props.product.name}
           </CardTitle>
 
