@@ -29,12 +29,12 @@ export default function NavbarDisplay() {
         style={{
           backgroundImage:
             "https://images.unsplash.com/photo-1485841890310-6a055c88698a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max",
-          backgroundColor: "rgb(183,200,151)",
         }}
         light
         expand='md'
       >
         <NavbarBrand
+          className='col-3'
           href='/'
           style={{
             color: "var(--pink)",
@@ -50,13 +50,13 @@ export default function NavbarDisplay() {
           onClick={toggle}
         />
         <Collapse isOpen={isOpen} navbar>
-          <Nav className='mr-auto pl-5' navbar>
-            <NavItem tag='h3'>
+          <Nav className='mr-auto pl-5 col-8' navbar>
+            <NavItem tag='h4'>
               <Link className='nav-link' to='/'>
                 Shop
               </Link>
             </NavItem>
-            <NavItem tag='h3'>
+            <NavItem tag='h4'>
               <Link className='nav-link' to='/orders'>
                 Orders
               </Link>
@@ -64,9 +64,10 @@ export default function NavbarDisplay() {
           </Nav>
           <NavbarText>
             <Link
+              className='col-1'
               style={{
                 color: "rgba(0,0,0,.6)",
-                fontSize: "2rem",
+                fontSize: "1.3rem",
                 marginBottom: "1em",
               }}
               className='nav-link'

@@ -3,6 +3,7 @@
   --pink: rgb(159, 76, 91);
   --green: rgb(89, 137, 19);
   --white: rgb(245, 246, 248);
+  --lightGreen: rgb(179, 198, 142);
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -22,21 +23,22 @@ code {
     monospace;
 }
 .navbar {
-  background-image: url(https://images.unsplash.com/photo-1485841890310-6a055c88698a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max);
-  background-size: contain;
+  border-bottom: 5px solid var(--green);
+  background-color: var(--white);
   height: 25vh;
+}
+ul {
+  justify-content: flex-end;
 }
 .nav-link {
   color: var(--pink) !important;
-}
-.home {
-  background-color: var(--white);
+  margin-left: 2em;
 }
 
 footer {
   display: flex;
   justify-content: center;
-  background-color: rgb(179, 198, 142);
+  background-color: var(--green);
   font-size: 12px;
   position: fixed;
   width: 100%;
