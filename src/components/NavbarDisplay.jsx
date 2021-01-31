@@ -12,7 +12,7 @@ import {
 import { TiShoppingCart } from "react-icons/ti";
 import { RiPlantFill } from "react-icons/ri";
 import ListOfProducts from "./products/ListOfProducts";
-import Orders from "./orders/orders";
+import Orders from "./orders/Orders";
 import { useSelector } from "react-redux";
 
 export default function NavbarDisplay() {
@@ -35,7 +35,7 @@ export default function NavbarDisplay() {
       >
         <NavbarBrand
           className='col-3'
-          href='/'
+          href='/shop'
           style={{
             color: "var(--pink)",
             fontSize: "2rem",
@@ -52,7 +52,7 @@ export default function NavbarDisplay() {
         <Collapse isOpen={isOpen} navbar>
           <Nav className='mr-auto pl-5 col-8' navbar>
             <NavItem tag='h4'>
-              <Link className='nav-link' to='/'>
+              <Link className='nav-link' to='/shop'>
                 Shop
               </Link>
             </NavItem>
@@ -64,13 +64,12 @@ export default function NavbarDisplay() {
           </Nav>
           <NavbarText>
             <Link
-              className='col-1'
+              className='col-1 nav-link'
               style={{
                 color: "rgba(0,0,0,.6)",
                 fontSize: "1.3rem",
                 marginBottom: "1em",
               }}
-              className='nav-link'
               to='/orders'
             >
               {basketCounter}
@@ -86,7 +85,9 @@ export default function NavbarDisplay() {
         </Collapse>
       </Navbar>
       <Switch>
-        <Route path='/'></Route>
+        <Route path='/shop'>
+          <ListOfProducts />
+        </Route>
         <Route path='/orders'>
           <Orders />
         </Route>

@@ -50,7 +50,7 @@ export default function Product(props) {
             <Button
               className='col-2 button'
               onClick={() => {
-                dispatch(remove(props.product));
+                dispatch(remove(props.product.name));
               }}
             >
               -
