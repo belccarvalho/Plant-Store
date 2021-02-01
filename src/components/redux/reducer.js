@@ -4,7 +4,6 @@ const initialState = {
   products: products,
 };
 const reducer = (state = initialState, action) => {
-  let indexOfItem = -1;
   // const stockOfProduct = action.payload.stock;
   switch (action.type) {
     case "ADD_PRODUCT":
@@ -52,6 +51,7 @@ const reducer = (state = initialState, action) => {
     case "REM_PRODUCT":
       //change just the quantity of the product in the basket order, if the product is already there, or delete it if the quantity is zero
       state.basket.order.map((item, index) => {
+        // let indexOfItem = -1;
         if (item.title === action.payload.name) {
           item.quantity--;
 
@@ -59,6 +59,7 @@ const reducer = (state = initialState, action) => {
             let indexOfItem = index;
             if (indexOfItem !== -1) {
               state.basket.order.splice(indexOfItem, 1);
+              state.basket.qtyItem = state.basket.order.length;
             }
           }
         }

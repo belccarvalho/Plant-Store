@@ -1,16 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { Table } from "reactstrap";
-let total;
+let values;
 export default function Orders() {
+  const [total, setTotal] = useState(0);
   const orders = useSelector((state) => state.basket.order);
-  orders.reducer((item) => {});
   const reducer = (accumulator, currentValue) => accumulator + currentValue;
+  // useEffect =
+  //   (() => {
+  //     orders.map((item) => {
+  //       let value = item.price * item.quantity;
+  //       let values = [...value];
+  //       return values;
+  //     });
+  //     values.reduce(reducer);
+  //     setTotal(values);
+  //     return total;
+  //   },
+  //   []);
 
-  total = orders.map((item) => {
-    total = +item.price * item.quantity;
-    return total;
-  });
+  // total = orders.map((item) => {
+  //   total = +item.price * item.quantity;
+  //   return total;
+  // });
   return (
     <div>
       <Table className='d-flex justify-content-center mt-5'>
