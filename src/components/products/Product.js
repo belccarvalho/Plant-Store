@@ -54,7 +54,7 @@ export default function Product(props) {
                 dispatch(remove(props.product.name));
                 setQty((prevQty) => prevQty - 1);
               }}
-              // disable={(qty = 0 ? true : false)}
+              disabled={qty < 1 ? true : false}
             >
               -
             </Button>
