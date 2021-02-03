@@ -36,7 +36,6 @@ export default function Product(props) {
           style={{ objectFit: "contain" }}
           top
           width='100%'
-          height='300px'
           src={props.product.image}
           alt='Card image cap'
         />
@@ -55,7 +54,7 @@ export default function Product(props) {
                 dispatch(remove(props.product.name));
                 setQty((prevQty) => prevQty - 1);
               }}
-              // disable={qty <= 0 ? true : false}
+              // disable={(qty = 0 ? true : false)}
             >
               -
             </Button>
