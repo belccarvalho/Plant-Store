@@ -1,23 +1,21 @@
 import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { Table } from "reactstrap";
-let values;
+let sum;
 export default function Orders() {
-  const [total, setTotal] = useState(0);
+  const [total, setTotal] = useState([]);
   const orders = useSelector((state) => state.basket.order);
   const reducer = (accumulator, currentValue) => accumulator + currentValue;
-  // useEffect =
-  //   (() => {
-  //     orders.map((item) => {
-  //       let value = item.price * item.quantity;
-  //       let values = [...value];
-  //       return values;
-  //     });
-  //     values.reduce(reducer);
-  //     setTotal(values);
-  //     return total;
-  //   },
-  //   []);
+  useEffect(() => {
+    orders.map((item) => {
+      let partialTotal = item.price * item.quantity;
+      console.log(partialTotal);
+      // setTotal([...partialTotal]);
+      return total;
+    });
+    let sum = total.reduce(reducer);
+    return sum;
+  }, []);
 
   // total = orders.map((item) => {
   //   total = +item.price * item.quantity;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Card,
   CardImg,
@@ -13,6 +13,8 @@ import { remove, add } from "../redux/actions";
 import "./products.css";
 // import { useSelector } from "react-redux";
 export default function Product(props) {
+  const [qty, setQty] = useState(0);
+
   // const ordersDone = useSelector((state) => {
   //   state.basket.order;
   // });
@@ -51,7 +53,9 @@ export default function Product(props) {
               className='col-2 button'
               onClick={() => {
                 dispatch(remove(props.product.name));
+                setQty((prevQty) => prevQty - 1);
               }}
+              // disable={qty <= 0 ? true : false}
             >
               -
             </Button>
@@ -59,12 +63,13 @@ export default function Product(props) {
               className='col-2 mx-2 text-center'
               disabled
               type='number'
-              // value={}
+              value={qty}
             />
             <Button
               className='col-2 button'
               onClick={() => {
                 dispatch(add(props.product.name, props.product.price));
+                setQty((prevQty) => prevQty + 1);
               }}
             >
               +
