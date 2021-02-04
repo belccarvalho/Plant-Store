@@ -33,7 +33,10 @@ ul {
   color: var(--pink) !important;
   margin-left: 2em;
 }
-
+#soldOut {
+  height: 50px;
+  width: 50px;
+}
 footer {
   display: flex;
   justify-content: center;

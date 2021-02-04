@@ -11,6 +11,7 @@ import {
 import { useDispatch } from "react-redux";
 import { remove, add } from "../redux/actions";
 import "./products.css";
+import soldOut from "../../images/sold-out.svg";
 // import { useSelector } from "react-redux";
 export default function Product(props) {
   const [qty, setQty] = useState(0);
@@ -67,7 +68,7 @@ export default function Product(props) {
             >
               +
             </Button>
-            <img src='sold-out.svg' alt='sold out'></img>
+            <img src={soldOut} alt='sold out' id='soldout'></img>
           </div>
         </CardBody>
       </Card>
