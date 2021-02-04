@@ -39,7 +39,6 @@ export default function NavbarDisplay() {
           style={{
             color: "var(--pink)",
             fontSize: "2rem",
-            marginBottom: "1em",
           }}
         >
           Online-Shop

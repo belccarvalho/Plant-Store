@@ -1,7 +1,7 @@
 :root {
   /* --pink: rgb(214, 131, 141); */
   --pink: rgb(159, 76, 91);
-  --green: rgb(89, 137, 19);
+  /* --green: rgb(89, 137, 19); */
   --white: rgb(245, 246, 248);
   --lightGreen: rgb(179, 198, 142);
   padding: 0;
@@ -23,9 +23,8 @@ code {
     monospace;
 }
 .navbar {
-  border-bottom: 5px solid var(--green);
-  background-color: var(--white);
-  height: 25vh;
+  background-color: var(--lightGreen);
+  height: 20vh;
 }
 ul {
   justify-content: flex-end;
@@ -38,7 +37,7 @@ ul {
 footer {
   display: flex;
   justify-content: center;
-  background-color: var(--green);
+  background-color: var(--lightGreen);
   font-size: 12px;
   position: fixed;
   width: 100%;

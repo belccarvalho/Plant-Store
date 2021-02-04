@@ -14,20 +14,10 @@ import "./products.css";
 // import { useSelector } from "react-redux";
 export default function Product(props) {
   const [qty, setQty] = useState(0);
+  const [limit, setLimit] = useState(props.product.stock);
+  const [soldOut, setSoldOut] = useState(false);
 
-  // const ordersDone = useSelector((state) => {
-  //   state.basket.order;
-  // });
-  // const products = useSelector((state) => {
-  //   state.products;
-  // });
   const dispatch = useDispatch();
-  // defining quantity of product ordered to display it
-  // let quantityOfThisProduct = ordersDone.map((item) => {
-  //   if (item.title === products.name) {
-  //     return item.quantity;
-  //   }
-  // });
 
   return (
     <div key={props.product.id}>
@@ -69,10 +59,15 @@ export default function Product(props) {
               onClick={() => {
                 dispatch(add(props.product.name, props.product.price));
                 setQty((prevQty) => prevQty + 1);
+                console.log(limit);
               }}
+              disabled={qty === limit ? true : false}
+              // {if (qty === limit) => {setSoldOut(true)
+              // }}
             >
               +
             </Button>
+            <img src='sold-out.svg' alt='sold out'></img>
           </div>
         </CardBody>
       </Card>
