@@ -1,3 +1,1 @@
-##Online Store created with use of React and Redux. 
-
-Not yet finished. 
+##Online Store created with use of React and Redux durinf one year Web Development course.
