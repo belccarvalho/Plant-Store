@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Plant_Store/static/css/main.fde4b0fa.chunk.css",
+    "main.js": "/Plant_Store/static/js/main.32a8eebc.chunk.js",
+    "main.js.map": "/Plant_Store/static/js/main.32a8eebc.chunk.js.map",
+    "runtime-main.js": "/Plant_Store/static/js/runtime-main.32f35495.js",
+    "runtime-main.js.map": "/Plant_Store/static/js/runtime-main.32f35495.js.map",
+    "static/js/2.518c857f.chunk.js": "/Plant_Store/static/js/2.518c857f.chunk.js",
+    "static/js/2.518c857f.chunk.js.map": "/Plant_Store/static/js/2.518c857f.chunk.js.map",
+    "index.html": "/Plant_Store/index.html",
+    "static/css/main.fde4b0fa.chunk.css.map": "/Plant_Store/static/css/main.fde4b0fa.chunk.css.map",
+    "static/js/2.518c857f.chunk.js.LICENSE.txt": "/Plant_Store/static/js/2.518c857f.chunk.js.LICENSE.txt",
+    "static/media/noStock.4c92d5ce.png": "/Plant_Store/static/media/noStock.4c92d5ce.png",
+    "static/media/soldout.f0096546.png": "/Plant_Store/static/media/soldout.f0096546.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.32f35495.js",
+    "static/js/2.518c857f.chunk.js",
+    "static/css/main.fde4b0fa.chunk.css",
+    "static/js/main.32a8eebc.chunk.js"
+  ]
+}
