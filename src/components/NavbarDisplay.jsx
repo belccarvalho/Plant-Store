@@ -13,17 +13,15 @@ import { TiShoppingCart } from "react-icons/ti";
 import { RiPlantFill } from "react-icons/ri";
 import ListOfProducts from "./products/ListOfProducts.jsx";
 import Orders from "./orders/Orders.jsx";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 export default function NavbarDisplay() {
   const basketCounter = useSelector((state) => state.basket.qtyItem);
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
-  const dispatch = useDispatch();
 
   return (
     <Router>
-      {/* Define navbar */}
       <Navbar
         className='navbar p-3S'
         style={{

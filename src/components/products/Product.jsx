@@ -8,13 +8,13 @@ import {
   Button,
   Input,
 } from "reactstrap";
-import { useSelector, useDispatch, useStore } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { remove, add, sumOrders } from "../redux/actions";
 import soldOutImg from "../../assets/images/soldout.png";
 export default function Product(props) {
   const orders = useSelector((state) => state.basket.order);
   const [qty, setQty] = useState(0);
-  const [limit, setLimit] = useState(props.product.stock);
+  const limit = props.product.stock;
   const [soldOut, setSoldOut] = useState(false);
   // const [indexOfItem, setIndexOfItem] = useState(0);
 

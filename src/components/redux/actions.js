@@ -24,3 +24,9 @@ export function sumOrders() {
     type: "SUM_ORDERS",
   };
 }
+export function deleteItem(index) {
+  return {
+    type: "DEL_ITEM",
+    payload: index,
+  };
+}

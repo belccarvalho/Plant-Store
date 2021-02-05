@@ -1,6 +1,6 @@
 const products = [
   {
-    id: 0,
+    id: "a5t1",
     name: "Chinese Money",
     price: 11,
     image:
@@ -8,7 +8,7 @@ const products = [
     stock: 2,
   },
   {
-    id: 1,
+    id: "g5t2",
     name: "Jesmonite Planter",
     price: 9,
     image:
@@ -16,7 +16,7 @@ const products = [
     stock: 3,
   },
   {
-    id: 2,
+    id: "js48",
     name: "Monstera Deliciosa",
     price: 15,
     image:
@@ -24,7 +24,7 @@ const products = [
     stock: 15,
   },
   {
-    id: 3,
+    id: "t48s",
     name: "Ludisia Discolor",
     price: 16,
     image:
@@ -32,7 +32,7 @@ const products = [
     stock: 8,
   },
   {
-    id: 4,
+    id: "d7h3",
     name: "Hoya Lanceolata",
     price: 25,
     image:
@@ -40,7 +40,7 @@ const products = [
     stock: 13,
   },
   {
-    id: 5,
+    id: "d8gv",
     name: "Calathea Vittata",
     price: 16,
     image:
@@ -48,7 +48,7 @@ const products = [
     stock: 12,
   },
   {
-    id: 6,
+    id: "d7v0",
     name: "Ph. Birkin",
     price: 17,
     image:
@@ -56,7 +56,7 @@ const products = [
     stock: 10,
   },
   {
-    id: 7,
+    id: "d8v9",
     name: "Korbmarante",
     price: 18,
     image:

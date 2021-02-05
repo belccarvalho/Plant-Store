@@ -74,9 +74,7 @@ const reducer = (state = initialState, action) => {
         }
         return product;
       });
-      return {
-        ...state,
-      };
+      return state;
 
     case "SUM_ORDERS":
       if (state.basket.total !== 0) {
@@ -90,9 +88,14 @@ const reducer = (state = initialState, action) => {
           return sum;
         });
         state.basket.total = sum.reduce(reducer);
-        return { ...state };
+        return state;
+      } else {
+        return state;
       }
-      break;
+
+    case "DEL_ITEM":
+      state.basket.order.splice(action.payload, 1);
+      return state;
 
     default:
       return state;

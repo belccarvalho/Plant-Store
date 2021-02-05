@@ -89,6 +89,10 @@ ul {
   padding: 0.5em;
   color: var(--white) !important;
 }
+#delete {
+  width: 1.2em;
+  height: 1.2em;
+}
 .sum {
   font-weight: 700;
   font-size: 1.6rem;
