@@ -33,9 +33,34 @@ ul {
   color: var(--pink) !important;
   margin-left: 2em;
 }
-#soldOut {
-  height: 50px;
-  width: 50px;
+.display-products {
+  display: flex;
+  justify-content: center;
+  background-color: var(--white);
+  padding-top: 3em;
+}
+.cardWrapper {
+  grid-gap: 3em;
+}
+.card {
+  background-color: var(--white);
+  border: var(--green) solid 3px;
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.2),
+    -3px -3px 7px rgba(255, 255, 255, 0.2);
+  padding: 0.5em;
+}
+.card-body {
+  padding: 0.5em;
+}
+
+.input {
+  min-width: 65px;
+  text-align: center;
+}
+#sold-out {
+  height: 1.7rem;
+  width: 2.6rem;
+  align-self: center;
 }
 footer {
   display: flex;
@@ -56,4 +81,52 @@ footer p > a {
 }
 footer p > a:hover {
   color: var(--pink);
+}
+
+@media only screen and (min-width: 424px) {
+  .cardWrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+
+    margin: 1em 0.5em;
+  }
+  h4 {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .cardWrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    margin: 2em;
+    margin-bottom: 5rem;
+  }
+  h5 {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .cardWrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+  }
+}
+.button {
+  background-color: rgb(14, 69, 68);
+}
+
+@media only screen and (min-width: 1200px) {
+  .cardWrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+  }
+}
+.button {
+  background-color: rgb(14, 69, 68);
 }
