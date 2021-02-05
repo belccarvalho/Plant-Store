@@ -13,13 +13,13 @@ import { TiShoppingCart } from "react-icons/ti";
 import { RiPlantFill } from "react-icons/ri";
 import ListOfProducts from "./products/ListOfProducts.jsx";
 import Orders from "./orders/Orders.jsx";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 export default function NavbarDisplay() {
   const basketCounter = useSelector((state) => state.basket.qtyItem);
   const [isOpen, setIsOpen] = useState(false);
-
   const toggle = () => setIsOpen(!isOpen);
+  const dispatch = useDispatch();
 
   return (
     <Router>
@@ -71,7 +71,6 @@ export default function NavbarDisplay() {
               }}
               to='/orders'
             >
-              {basketCounter}
               <TiShoppingCart
                 style={{
                   width: "4rem",
@@ -79,6 +78,7 @@ export default function NavbarDisplay() {
                   color: "var(--pink)",
                 }}
               />
+              {basketCounter}
             </Link>
           </NavbarText>
         </Collapse>

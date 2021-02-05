@@ -22,6 +22,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+/* NAVBAR */
 .navbar {
   background-color: var(--lightGreen);
   height: 20vh;
@@ -33,12 +34,17 @@ ul {
   color: var(--pink) !important;
   margin-left: 2em;
 }
+/* END OF NAVBAR */
+/* LIST OF PRODUCTS */
+
 .display-products {
   display: flex;
   justify-content: center;
   background-color: var(--white);
   padding-top: 3em;
 }
+/* END OF LIST OF PRODUCTS */
+/* PRODUCT */
 .cardWrapper {
   grid-gap: 3em;
 }
@@ -57,11 +63,39 @@ ul {
   min-width: 65px;
   text-align: center;
 }
+.button {
+  background-color: rgb(14, 69, 68);
+  border-radius: 0.25rem;
+  color: white;
+}
 #sold-out {
   height: 1.7rem;
   width: 2.6rem;
   align-self: center;
 }
+/* END OF PRODUCT */
+/* ORDERS */
+.cardEmpty,
+.goShop {
+  text-align: center;
+  margin: 3em;
+}
+.cardEmpty {
+  color: var(--pink);
+}
+.goShop {
+  background-color: var(--lightGreen);
+  font-weight: 900;
+  padding: 0.5em;
+  color: var(--white) !important;
+}
+.sum {
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+/* END OF ORDERS */
+/* FOOTER */
 footer {
   display: flex;
   justify-content: center;
@@ -82,6 +116,7 @@ footer p > a {
 footer p > a:hover {
   color: var(--pink);
 }
+/* END OF FOOTER */
 
 @media only screen and (min-width: 424px) {
   .cardWrapper {
@@ -116,9 +151,6 @@ footer p > a:hover {
     grid-template-rows: auto;
   }
 }
-.button {
-  background-color: rgb(14, 69, 68);
-}
 
 @media only screen and (min-width: 1200px) {
   .cardWrapper {
@@ -126,7 +158,4 @@ footer p > a:hover {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
   }
-}
-.button {
-  background-color: rgb(14, 69, 68);
 }

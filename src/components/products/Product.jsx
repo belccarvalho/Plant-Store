@@ -8,11 +8,12 @@ import {
   Button,
   Input,
 } from "reactstrap";
-import { useDispatch } from "react-redux";
-import { remove, add } from "../redux/actions";
+import { useSelector, useDispatch } from "react-redux";
+import { remove, add, sumOrders } from "../redux/actions";
 import soldOutImg from "../../assets/images/soldout.png";
 // import { useSelector } from "react-redux";
 export default function Product(props) {
+  const orders = useSelector((state) => state.basket.order);
   const [qty, setQty] = useState(0);
   const [limit, setLimit] = useState(props.product.stock);
   const [soldOut, setSoldOut] = useState(false);
@@ -41,9 +42,9 @@ export default function Product(props) {
             <Button
               className='col-2 button'
               onClick={() => {
-                dispatch(remove(props.product.name));
+                dispatch(remove(props.product.id));
+                dispatch(sumOrders());
                 setQty((prevQty) => prevQty - 1);
-                console.log("soldout", soldOut);
                 if (qty < limit) {
                   setSoldOut(false);
                 }
@@ -64,9 +65,15 @@ export default function Product(props) {
               <Button
                 className='col-2 button'
                 onClick={() => {
-                  dispatch(add(props.product.name, props.product.price));
+                  dispatch(
+                    add(
+                      props.product.id,
+                      props.product.name,
+                      props.product.price
+                    )
+                  );
+                  dispatch(sumOrders());
                   setQty((prevQty) => prevQty + 1);
-                  console.log("soldout", soldOut);
                   if (qty === limit - 1) {
                     setSoldOut(true);
                   }

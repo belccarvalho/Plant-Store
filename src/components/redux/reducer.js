@@ -1,6 +1,6 @@
 import products from "../../assets/data/products-details";
 const initialState = {
-  basket: { qtyItem: 0, order: [] },
+  basket: { qtyItem: 0, order: [], total: 0 },
   products: products,
 };
 const reducer = (state = initialState, action) => {
@@ -9,6 +9,7 @@ const reducer = (state = initialState, action) => {
     case "ADD_PRODUCT":
       //create object with some data from product in order to add to the basket order
       let newItem = {
+        id: action.payload.id,
         title: action.payload.name,
         price: action.payload.price,
         quantity: 1,
@@ -16,7 +17,7 @@ const reducer = (state = initialState, action) => {
       //change just the quantity of the product in the basket order, if the product is already there
       let itemExist = false;
       let itemIncreased = state.basket.order.map((item) => {
-        if (item.title === action.payload.name) {
+        if (item.id === action.payload.id) {
           itemExist = true;
           item.quantity++;
         }
@@ -24,7 +25,7 @@ const reducer = (state = initialState, action) => {
       });
       //decrease product from stock
       let productsStockUpdated = state.products.map((product) => {
-        if (product.name === action.payload.name) {
+        if (product.id === action.payload.id) {
           product.stock--;
         }
         return product;
@@ -52,7 +53,7 @@ const reducer = (state = initialState, action) => {
       //change just the quantity of the product in the basket order, if the product is already there, or delete it if the quantity is zero
       state.basket.order.map((item, index) => {
         // let indexOfItem = -1;
-        if (item.title === action.payload.name) {
+        if (item.id === action.payload.id) {
           item.quantity--;
 
           if (item.quantity === 0) {
@@ -68,7 +69,7 @@ const reducer = (state = initialState, action) => {
 
       //increase product from stock
       state.products.map((product) => {
-        if (product.name === action.payload.name) {
+        if (product.id === action.payload.id) {
           product.stock = product.stock + 1;
         }
         return product;
@@ -76,6 +77,22 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
       };
+
+    case "SUM_ORDERS":
+      if (state.basket.total !== 0) {
+        let partialSum;
+        let sum = [];
+        const reducer = (accumulator, currentValue) =>
+          accumulator + currentValue;
+        state.basket.order.map((item) => {
+          partialSum = item.price * item.quantity;
+          sum = [...sum, partialSum];
+          return sum;
+        });
+        state.basket.total = sum.reduce(reducer);
+        return { ...state };
+      }
+      break;
 
     default:
       return state;
