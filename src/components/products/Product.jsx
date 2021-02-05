@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Card,
   CardImg,
@@ -8,17 +8,26 @@ import {
   Button,
   Input,
 } from "reactstrap";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector, useDispatch, useStore } from "react-redux";
 import { remove, add, sumOrders } from "../redux/actions";
 import soldOutImg from "../../assets/images/soldout.png";
-// import { useSelector } from "react-redux";
 export default function Product(props) {
   const orders = useSelector((state) => state.basket.order);
   const [qty, setQty] = useState(0);
   const [limit, setLimit] = useState(props.product.stock);
   const [soldOut, setSoldOut] = useState(false);
+  // const [indexOfItem, setIndexOfItem] = useState(0);
 
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    orders.map((item, index) => {
+      if (item.id === props.product.id) {
+        setQty(orders[index].quantity);
+      }
+      return qty;
+    });
+  }, []);
 
   return (
     <div key={props.product.id}>
