@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { CardGroup } from "reactstrap";
-import Product from "./Product";
+import Product from "./Product.jsx";
 
 export default function ListOfProducts() {
   const products = useSelector((state) => state.products);

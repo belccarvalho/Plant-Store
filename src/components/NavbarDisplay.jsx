@@ -11,8 +11,8 @@ import {
 } from "reactstrap";
 import { TiShoppingCart } from "react-icons/ti";
 import { RiPlantFill } from "react-icons/ri";
-import ListOfProducts from "./products/ListOfProducts";
-import Orders from "./orders/Orders";
+import ListOfProducts from "./products/ListOfProducts.jsx";
+import Orders from "./orders/Orders.jsx";
 import { useSelector } from "react-redux";
 
 export default function NavbarDisplay() {

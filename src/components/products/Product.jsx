@@ -71,7 +71,6 @@ export default function Product(props) {
                     setSoldOut(true);
                   }
                 }}
-                // disabled={qty === limit ? true : false}
               >
                 +
               </Button>
