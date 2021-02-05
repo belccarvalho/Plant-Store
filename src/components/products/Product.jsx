@@ -14,7 +14,7 @@ import soldOutImg from "../../assets/images/soldout.png";
 export default function Product(props) {
   const orders = useSelector((state) => state.basket.order);
   const [qty, setQty] = useState(0);
-  const limit = props.product.stock;
+  const [limit, setLimit] = useState(props.product.stock);
   const [soldOut, setSoldOut] = useState(false);
   // const [indexOfItem, setIndexOfItem] = useState(0);
 

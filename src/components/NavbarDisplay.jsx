@@ -22,15 +22,7 @@ export default function NavbarDisplay() {
 
   return (
     <Router>
-      <Navbar
-        className='navbar p-3S'
-        style={{
-          backgroundImage:
-            "https://images.unsplash.com/photo-1485841890310-6a055c88698a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max",
-        }}
-        light
-        expand='md'
-      >
+      <Navbar className='navbar' light expand='md'>
         <NavbarBrand
           className='col-3'
           href='/shop'
@@ -42,12 +34,9 @@ export default function NavbarDisplay() {
           Online-Shop
           <RiPlantFill style={{ width: "4rem", height: "4rem" }} />{" "}
         </NavbarBrand>
-        <NavbarToggler
-          style={{ border: "2px solid var(--pink)" }}
-          onClick={toggle}
-        />
+        <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
-          <Nav className='mr-auto pl-5 col-8' navbar>
+          <Nav className=' col-8' navbar>
             <NavItem tag='h4'>
               <Link className='nav-link' to='/shop'>
                 Shop
@@ -61,7 +50,7 @@ export default function NavbarDisplay() {
           </Nav>
           <NavbarText>
             <Link
-              className='col-1 nav-link'
+              className='col-1 nav-link basket'
               style={{
                 color: "rgba(0,0,0,.6)",
                 fontSize: "1.3rem",
@@ -69,14 +58,10 @@ export default function NavbarDisplay() {
               }}
               to='/orders'
             >
-              <TiShoppingCart
-                style={{
-                  width: "4rem",
-                  height: "4rem",
-                  color: "var(--pink)",
-                }}
-              />
-              {basketCounter}
+              <span>
+                <TiShoppingCart />
+              </span>
+              <p>{basketCounter}</p>
             </Link>
           </NavbarText>
         </Collapse>

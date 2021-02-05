@@ -27,12 +27,27 @@ code {
   background-color: var(--lightGreen);
   height: 20vh;
 }
+.navbar-brand {
+  align-content: center;
+}
 ul {
   justify-content: flex-end;
 }
 .nav-link {
   color: var(--pink) !important;
   margin-left: 2em;
+  justify-content: start;
+}
+.basket {
+  display: inline-flex;
+  justify-content: center;
+  align-content: center;
+}
+.basket span {
+  font-size: 3.5rem;
+}
+.navbar-toggler {
+  border: 2px solid var(--pink);
 }
 /* END OF NAVBAR */
 /* LIST OF PRODUCTS */
@@ -50,7 +65,7 @@ ul {
 }
 .card {
   background-color: var(--white);
-  border: var(--green) solid 3px;
+  border: var(--lightGreen) solid 3px;
   box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.2),
     -3px -3px 7px rgba(255, 255, 255, 0.2);
   padding: 0.5em;

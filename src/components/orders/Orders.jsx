@@ -9,15 +9,11 @@ import { useDispatch } from "react-redux";
 export default function Orders() {
   const orders = useSelector((state) => state.basket.order);
   const total = useSelector((state) => state.basket.total);
-  const [reRender, setReRender] = useState(false);
+  const [isBasketEmpty, setIsBasketEmpty] = useState(true);
 
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(sumOrders());
-  }, [reRender]);
-
-  return total ? (
+  return isBasketEmpty ? (
     <div className='container col-6'>
       <Table className='justify-content-center mt-5 '>
         <thead style={{ color: "rgb(214,131,141)" }}>
@@ -44,7 +40,9 @@ export default function Orders() {
                     onClick={(e) => {
                       e.preventDefault();
                       dispatch(deleteItem(index));
-                      setReRender(!reRender);
+                      if (orders.length > 1) {
+                        dispatch(sumOrders());
+                      }
                     }}
                   ></img>
                 </td>

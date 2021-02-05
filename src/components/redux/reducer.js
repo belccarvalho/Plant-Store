@@ -77,7 +77,7 @@ const reducer = (state = initialState, action) => {
       return state;
 
     case "SUM_ORDERS":
-      if (state.basket.total !== 0) {
+      if (state.basket.order !== []) {
         let partialSum;
         let sum = [];
         const reducer = (accumulator, currentValue) =>
@@ -94,8 +94,17 @@ const reducer = (state = initialState, action) => {
       }
 
     case "DEL_ITEM":
-      state.basket.order.splice(action.payload, 1);
-      return state;
+      if (state.basket.order.length === 1) {
+        state.basket.total = 0;
+      }
+      return {
+        ...state,
+        basket: {
+          order: state.basket.order.splice(action.payload, 1),
+          qtyItem: state.basket.order.length,
+          total: state.basket.total,
+        },
+      };
 
     default:
       return state;
