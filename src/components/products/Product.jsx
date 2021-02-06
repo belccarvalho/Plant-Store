@@ -54,7 +54,7 @@ export default function Product(props) {
                 dispatch(remove(props.product.id));
                 dispatch(sumOrders());
                 setQty((prevQty) => prevQty - 1);
-                if (qty < limit) {
+                if (qty <= limit) {
                   setSoldOut(false);
                 }
               }}
