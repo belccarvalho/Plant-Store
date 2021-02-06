@@ -7,18 +7,23 @@ import {
   CardTitle,
   Button,
   Input,
+  Modal,
+  ModalHeader,
+  ModalBody,
 } from "reactstrap";
 import { useSelector, useDispatch } from "react-redux";
 import { remove, add, sumOrders } from "../redux/actions";
 import { TiShoppingCart } from "react-icons/ti";
 import soldOutImg from "../../assets/images/soldout.png";
+
 export default function Product(props) {
   const orders = useSelector((state) => state.basket.order);
   const [qty, setQty] = useState(0);
   const [limit, setLimit] = useState(props.product.stock);
   const [soldOut, setSoldOut] = useState(false);
-  // const [indexOfItem, setIndexOfItem] = useState(0);
+  const [modal, setModal] = useState(false);
 
+  const toggle = () => setModal(!modal);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -38,6 +43,7 @@ export default function Product(props) {
           width='100%'
           src={props.product.image}
           alt='Card image cap'
+          onClick={toggle}
         />
         <CardBody className='text-center'>
           <CardTitle style={{ color: "var(--pink)" }} tag='h4'>
@@ -100,6 +106,12 @@ export default function Product(props) {
           </Button>
         </CardBody>
       </Card>
+      <Modal isOpen={modal} toggle={toggle}>
+        <ModalHeader toggle={toggle}>{props.product.name}</ModalHeader>
+        <ModalBody>
+          <img src={props.product.image} alt='plant' />
+        </ModalBody>
+      </Modal>
     </div>
   );
 }

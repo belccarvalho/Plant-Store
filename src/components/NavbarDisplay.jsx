@@ -13,7 +13,7 @@ import { RiPlantFill } from "react-icons/ri";
 import Main from "./Main";
 import Banner from "./Banner";
 import ListOfProducts from "./products/ListOfProducts.jsx";
-import Orders from "./orders/Orders.jsx";
+import Cart from "./Cart.jsx";
 import Buy from "./Buy";
 import { useSelector } from "react-redux";
 
@@ -44,9 +44,12 @@ export default function NavbarDisplay() {
               <Link className='nav-link' to='/shop'>
                 Shop
               </Link>
+              <Link className='nav-link' to='/contact'>
+                Contact
+              </Link>
             </NavItem>
           </Nav>
-          <Link className='col-2 nav-link basket' to='/orders'>
+          <Link className='col-2 nav-link basket' to='/cart'>
             <span>
               <TiShoppingCart />
             </span>
@@ -62,9 +65,10 @@ export default function NavbarDisplay() {
         <Route path='/shop'>
           <ListOfProducts />
         </Route>
-        <Route path='/orders'>
-          <Orders />
+        <Route path='/cart'>
+          <Cart />
         </Route>
+        <Route path='/contact'></Route>
         <Route path='/buy'>
           <Buy />
         </Route>

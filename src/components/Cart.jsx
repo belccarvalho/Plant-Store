@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Table } from "reactstrap";
-import x from "../../assets/images/noStock.png";
-import { deleteItem, sumOrders } from "../redux/actions";
+import x from "../assets/images/noStock.png";
+import { deleteItem, sumOrders } from "./redux/actions";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import Banner from "../Banner";
-export default function Orders() {
+import Banner from "./Banner";
+export default function Cart() {
   const orders = useSelector((state) => state.basket.order);
   const total = useSelector((state) => state.basket.total);
   const [isBasketEmpty, setIsBasketEmpty] = useState(true);

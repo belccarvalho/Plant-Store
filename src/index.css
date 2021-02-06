@@ -117,6 +117,7 @@ ul {
 .card-img-top {
   object-fit: contain;
 }
+
 .input {
   min-width: 65px;
   text-align: center;
@@ -140,6 +141,25 @@ ul {
   height: 1.7rem;
   width: 2.6rem;
   align-self: center;
+}
+/* MODAL */
+
+.modal-content {
+  width: 100%;
+  border: var(--lightGreen) solid 3px;
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.2),
+    -3px -3px 7px rgba(255, 255, 255, 0.4);
+}
+.modal-header {
+  color: var(--darkPink);
+}
+.modal-title {
+  font-size: 3rem;
+}
+.modal-body img {
+  align-self: center;
+  width: 90%;
+  height: 90%;
 }
 /* END OF PRODUCT */
 /* ORDERS */
