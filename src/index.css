@@ -231,6 +231,7 @@ ul {
 }
 .contact h1 {
   font-size: 5rem;
+  color: var(--darkPink);
 }
 .contact h2,
 .contact h1 {
