@@ -25,10 +25,21 @@ code {
 /* NAVBAR */
 .navbar {
   background-color: var(--lightGreen);
-  height: 20vh;
+  height: fit-content;
 }
 .navbar-brand {
-  align-content: center;
+  display: inline-flex;
+  align-content: baseline;
+}
+.navbar-brand p {
+  font-size: 2rem;
+  color: var(--pink);
+  margin: 0;
+  align-self: flex-end;
+}
+.collapse {
+  display: flex;
+  justify-content: space-between;
 }
 ul {
   justify-content: flex-end;
@@ -42,12 +53,15 @@ ul {
   display: inline-flex;
   justify-content: center;
   align-content: center;
+  font-size: 1.3rem;
+  margin: 0;
 }
 .basket span {
   font-size: 3.5rem;
 }
 .navbar-toggler {
-  border: 2px solid var(--pink);
+  border: 3px solid var(--pink) !important;
+  border-radius: 10px;
 }
 /* END OF NAVBAR */
 /* LIST OF PRODUCTS */
@@ -67,7 +81,7 @@ ul {
   background-color: var(--white);
   border: var(--lightGreen) solid 3px;
   box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.2),
-    -3px -3px 7px rgba(255, 255, 255, 0.2);
+    -3px -3px 7px rgba(255, 255, 255, 0.4);
   padding: 0.5em;
 }
 .card-body {
@@ -90,19 +104,29 @@ ul {
 }
 /* END OF PRODUCT */
 /* ORDERS */
-.cardEmpty,
-.goShop {
-  text-align: center;
-  margin: 3em;
-}
 .cardEmpty {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 8rem 0;
+  margin: 5rem auto;
+  background: url("./assets/images/4cactus.jpeg") center/cover no-repeat;
+  min-height: calc(70vh - 10px);
+  min-height: 70vh;
+  border: var(--lightGreen) solid 3px;
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.2),
+    -3px -3px 7px rgba(255, 255, 255, 0.4);
+  text-align: center;
+  font-weight: 900;
   color: var(--pink);
 }
 .goShop {
   background-color: var(--lightGreen);
-  font-weight: 900;
+  margin-top: 2rem;
   padding: 0.5em;
   color: var(--white) !important;
+  align-self: center;
+  font-size: 2rem;
 }
 #delete {
   width: 1.2em;
@@ -151,6 +175,12 @@ footer p > a:hover {
 }
 
 @media only screen and (min-width: 768px) {
+  .collapse {
+    display: block;
+  }
+  .cardEmpty {
+    padding: 5rem 0 19rem 0;
+  }
   .cardWrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

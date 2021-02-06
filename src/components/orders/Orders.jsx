@@ -5,6 +5,7 @@ import { Table } from "reactstrap";
 import x from "../../assets/images/noStock.png";
 import { deleteItem, sumOrders } from "../redux/actions";
 import { useDispatch } from "react-redux";
+import cactus from "../../assets/images/4cactus.jpeg";
 
 export default function Orders() {
   const orders = useSelector((state) => state.basket.order);
@@ -12,7 +13,13 @@ export default function Orders() {
   const [isBasketEmpty, setIsBasketEmpty] = useState(true);
 
   const dispatch = useDispatch();
-
+  useEffect(() => {
+    if (orders === []) {
+      setIsBasketEmpty(true);
+    } else {
+      setIsBasketEmpty(false);
+    }
+  }, [total]);
   return isBasketEmpty ? (
     <div className='container col-6'>
       <Table className='justify-content-center mt-5 '>
@@ -40,9 +47,6 @@ export default function Orders() {
                     onClick={(e) => {
                       e.preventDefault();
                       dispatch(deleteItem(index));
-                      if (orders.length > 1) {
-                        dispatch(sumOrders());
-                      }
                     }}
                   ></img>
                 </td>
@@ -59,10 +63,10 @@ export default function Orders() {
       </Table>
     </div>
   ) : (
-    <div>
-      <h2 className='container cardEmpty'>Your Cart is empty</h2>
+    <div className='container cardEmpty '>
+      <h2>Your Cart is empty...</h2>
       <Link className='goShop' to='/shop'>
-        See our product
+        Go Shopping →
       </Link>
     </div>
   );

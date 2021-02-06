@@ -77,34 +77,38 @@ const reducer = (state = initialState, action) => {
       return state;
 
     case "SUM_ORDERS":
-      if (state.basket.order !== []) {
-        let partialSum;
-        let sum = [];
-        const reducer = (accumulator, currentValue) =>
-          accumulator + currentValue;
-        state.basket.order.map((item) => {
-          partialSum = item.price * item.quantity;
-          sum = [...sum, partialSum];
-          return sum;
-        });
-        state.basket.total = sum.reduce(reducer);
-        return state;
-      } else {
-        return state;
-      }
+      let partialSum;
+      let sum = [];
+      const reducer = (accumulator, currentValue) => accumulator + currentValue;
+      state.basket.order.map((item) => {
+        partialSum = item.price * item.quantity;
+        sum = [...sum, partialSum];
+        return sum;
+      });
+      state.basket.total = sum.reduce(reducer);
+      return state;
 
     case "DEL_ITEM":
-      if (state.basket.order.length === 1) {
-        state.basket.total = 0;
+      if (state.basket.order.length > 1) {
+        return {
+          ...state,
+          basket: {
+            order: state.basket.order.splice(action.payload, 1),
+            qtyItem: state.basket.order.length,
+            total: state.basket.total,
+          },
+        };
+      } else {
+        console.log(state.basket.order[action.payload]);
+        return {
+          ...state,
+          basket: {
+            order: [],
+            qtyItem: 0,
+            total: 0,
+          },
+        };
       }
-      return {
-        ...state,
-        basket: {
-          order: state.basket.order.splice(action.payload, 1),
-          qtyItem: state.basket.order.length,
-          total: state.basket.total,
-        },
-      };
 
     default:
       return state;
