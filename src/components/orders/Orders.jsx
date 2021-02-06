@@ -46,7 +46,7 @@ export default function Orders() {
                     onClick={(e) => {
                       e.preventDefault();
                       dispatch(deleteItem(index));
-                      dispatch(sumOrders());
+                      dispatch(sumOrders(index));
                     }}
                   ></img>
                 </td>

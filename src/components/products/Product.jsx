@@ -10,6 +10,7 @@ import {
 } from "reactstrap";
 import { useSelector, useDispatch } from "react-redux";
 import { remove, add, sumOrders } from "../redux/actions";
+import { TiShoppingCart } from "react-icons/ti";
 import soldOutImg from "../../assets/images/soldout.png";
 export default function Product(props) {
   const orders = useSelector((state) => state.basket.order);
@@ -92,7 +93,7 @@ export default function Product(props) {
             )}
           </div>
           <Button className='col-2 addCart' onClick={() => {}}>
-            Add to Cart
+            Add to Cart <TiShoppingCart />
           </Button>
         </CardBody>
       </Card>
