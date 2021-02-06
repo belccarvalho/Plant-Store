@@ -5,8 +5,7 @@ import { Table } from "reactstrap";
 import x from "../../assets/images/noStock.png";
 import { deleteItem, sumOrders } from "../redux/actions";
 import { useDispatch } from "react-redux";
-import cactus from "../../assets/images/4cactus.jpeg";
-
+import Banner from "../Banner";
 export default function Orders() {
   const orders = useSelector((state) => state.basket.order);
   const total = useSelector((state) => state.basket.total);
@@ -63,11 +62,6 @@ export default function Orders() {
       </Table>
     </div>
   ) : (
-    <div className='container cardEmpty '>
-      <h2>Your Cart is empty...</h2>
-      <Link className='goShop' to='/shop'>
-        Go Shopping →
-      </Link>
-    </div>
+    <Banner text='Your Cart is empty...'></Banner>
   );
 }

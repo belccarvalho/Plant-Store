@@ -1,5 +1,5 @@
-import NavbarDisplay from "./components/NavbarDisplay";
 import React from "react";
+import NavbarDisplay from "./components/NavbarDisplay";
 import Footer from "./components/Footer.jsx";
 
 export default function App() {

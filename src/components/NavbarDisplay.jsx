@@ -7,12 +7,12 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavbarText,
 } from "reactstrap";
 import { TiShoppingCart } from "react-icons/ti";
 import { RiPlantFill } from "react-icons/ri";
 import ListOfProducts from "./products/ListOfProducts.jsx";
 import Orders from "./orders/Orders.jsx";
+import Banner from "./Banner";
 import { useSelector } from "react-redux";
 
 export default function NavbarDisplay() {
@@ -23,7 +23,7 @@ export default function NavbarDisplay() {
   return (
     <Router>
       <Navbar className='navbar' light expand='md'>
-        <NavbarBrand className='col-3' href='/shop'>
+        <NavbarBrand className='col-3' href='/home'>
           <RiPlantFill
             style={{ color: "var(--pink)", width: "4rem", height: "4rem" }}
           />
@@ -53,6 +53,9 @@ export default function NavbarDisplay() {
         </Collapse>
       </Navbar>
       <Switch>
+        <Route path='/home'>
+          <Banner text='Welcome! We are happy you are here!'></Banner>
+        </Route>
         <Route path='/shop'>
           <ListOfProducts />
         </Route>

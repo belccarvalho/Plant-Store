@@ -33,7 +33,6 @@ export default function Product(props) {
     <div key={props.product.id}>
       <Card body width='100%' height='200px'>
         <CardImg
-          style={{ objectFit: "contain" }}
           top
           width='100%'
           src={props.product.image}
