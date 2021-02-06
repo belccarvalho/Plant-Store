@@ -1,1 +1,2 @@
-##Online Store created with use of React and Redux during local host one year Web Development course.
+##Online_Shop
+This is a mock-up of an online-shop developed during a one-year Web Development course

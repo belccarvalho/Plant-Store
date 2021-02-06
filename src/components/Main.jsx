@@ -6,7 +6,7 @@ export default function Main() {
     <div>
       <p className='disclaimer'>
         <span>Disclaimer:</span> This is a mock-up of an online-shop developed
-        during an one-year Web Development course.{" "}
+        during a one-year Web Development course.{" "}
         <span>
           {" "}
           Aim: use of <FaReact /> React and <SiRedux /> Redux{" "}
