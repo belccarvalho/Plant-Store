@@ -10,9 +10,11 @@ import {
 } from "reactstrap";
 import { TiShoppingCart } from "react-icons/ti";
 import { RiPlantFill } from "react-icons/ri";
+import Main from "./Main";
+import Banner from "./Banner";
 import ListOfProducts from "./products/ListOfProducts.jsx";
 import Orders from "./orders/Orders.jsx";
-import Banner from "./Banner";
+import Buy from "./Buy";
 import { useSelector } from "react-redux";
 
 export default function NavbarDisplay() {
@@ -34,13 +36,13 @@ export default function NavbarDisplay() {
         <Collapse isOpen={isOpen} navbar>
           <Nav className=' col-10' navbar>
             <NavItem tag='h4'>
-              <Link className='nav-link' to='/shop'>
-                Shop
+              <Link className='nav-link' to='/home'>
+                Home
               </Link>
             </NavItem>
             <NavItem tag='h4'>
-              <Link className='nav-link' to='/orders'>
-                Orders
+              <Link className='nav-link' to='/shop'>
+                Shop
               </Link>
             </NavItem>
           </Nav>
@@ -52,15 +54,19 @@ export default function NavbarDisplay() {
           </Link>
         </Collapse>
       </Navbar>
+      <Main />
       <Switch>
         <Route path='/home'>
-          <Banner text='Welcome! We are happy you are here!'></Banner>
+          <Banner text='Welcome, We are happy you are here =)'></Banner>
         </Route>
         <Route path='/shop'>
           <ListOfProducts />
         </Route>
         <Route path='/orders'>
           <Orders />
+        </Route>
+        <Route path='/buy'>
+          <Buy />
         </Route>
       </Switch>
     </Router>
