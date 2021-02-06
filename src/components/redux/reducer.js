@@ -1,6 +1,5 @@
 import products from "../../assets/data/products-details";
 import { sumOrders } from "./actions";
-import { useDispatch } from "react-redux";
 const initialState = {
   basket: { qtyItem: 0, order: [], total: 0 },
   products: products,
