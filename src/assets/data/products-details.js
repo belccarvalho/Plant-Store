@@ -40,7 +40,7 @@ const products = [
     stock: 13,
   },
   {
-    id: "d8gv",
+    id: "dd0v",
     name: "Calathea Vittata",
     price: 16,
     image:
@@ -62,6 +62,38 @@ const products = [
     image:
       "https://mk0newsiteviodqfcuwv.kinstacdn.com/wp-content/uploads/2018/09/Plant-Circle_28-02-20_Photo-by-Savannah-van-der-Niet-5.jpg",
     stock: 4,
+  },
+  {
+    id: "d7vf",
+    name: "Zirkus Topf",
+    price: 63.5,
+    image:
+      "https://mk0newsiteviodqfcuwv.kinstacdn.com/wp-content/uploads/2019/07/Plant-Circle_30-May-2019_Photo-by-Savannah-van-der-Niet-35-2.jpg",
+    stock: 12,
+  },
+  {
+    id: "d52s",
+    name: "Aglaonema Unnamed",
+    price: 16,
+    image:
+      "https://mk0newsiteviodqfcuwv.kinstacdn.com/wp-content/uploads/2019/07/Plant-Circle_24-Jan-2020_Photo-by-Savannah-van-der-Niet-54.jpg",
+    stock: 9,
+  },
+  {
+    id: "5df0",
+    name: "Neon Robusta",
+    price: 16,
+    image:
+      "https://mk0newsiteviodqfcuwv.kinstacdn.com/wp-content/uploads/2019/09/Plant-Circle_24-October-2019-46.jpg",
+    stock: 15,
+  },
+  {
+    id: "9fn3",
+    name: "Begonia Maculata",
+    price: 15,
+    image:
+      "https://mk0newsiteviodqfcuwv.kinstacdn.com/wp-content/uploads/2018/09/20200320-DSC_3360.jpg",
+    stock: 9,
   },
 ];
 export default products;
