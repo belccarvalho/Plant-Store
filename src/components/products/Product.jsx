@@ -51,8 +51,6 @@ export default function Product(props) {
             <Button
               className='col-2 button'
               onClick={() => {
-                dispatch(remove(props.product.id));
-                dispatch(sumOrders());
                 setQty((prevQty) => prevQty - 1);
                 if (qty <= limit) {
                   setSoldOut(false);
@@ -74,14 +72,6 @@ export default function Product(props) {
               <Button
                 className='col-2 button'
                 onClick={() => {
-                  dispatch(
-                    add(
-                      props.product.id,
-                      props.product.name,
-                      props.product.price
-                    )
-                  );
-                  dispatch(sumOrders());
                   setQty((prevQty) => prevQty + 1);
                   if (qty === limit - 1) {
                     setSoldOut(true);
@@ -92,7 +82,20 @@ export default function Product(props) {
               </Button>
             )}
           </div>
-          <Button className='col-2 addCart' onClick={() => {}}>
+          <Button
+            className='col-2 addCart'
+            onClick={() => {
+              dispatch(
+                add(
+                  props.product.id,
+                  props.product.name,
+                  props.product.price,
+                  qty
+                )
+              );
+              dispatch(sumOrders());
+            }}
+          >
             Add to Cart <TiShoppingCart />
           </Button>
         </CardBody>

@@ -45,7 +45,7 @@ export default function Orders() {
                     id='delete'
                     onClick={(e) => {
                       e.preventDefault();
-                      dispatch(deleteItem(index));
+                      dispatch(deleteItem(index, item.id, item.quantity));
                       dispatch(sumOrders(index));
                     }}
                   ></img>

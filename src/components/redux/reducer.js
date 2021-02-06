@@ -13,39 +13,22 @@ const reducer = (state = initialState, action) => {
         id: action.payload.id,
         title: action.payload.name,
         price: action.payload.price,
-        quantity: 1,
+        quantity: action.payload.qty,
       };
-      //change just the quantity of the product in the basket order, if the product is already there
-      let itemExist = false;
-      let itemIncreased = state.basket.order.map((item) => {
-        if (item.id === action.payload.id) {
-          itemExist = true;
-          item.quantity++;
-        }
-        return item;
-      });
+
       //decrease product from stock
       let productsStockUpdated = state.products.map((product) => {
         if (product.id === action.payload.id) {
-          product.stock--;
+          product.stock = product.stock - action.payload.qty;
         }
         return product;
       });
-      //add the newItem to the order
-      if (!itemExist) {
-        return {
-          ...state,
-          basket: {
-            qtyItem: state.basket.order.length + 1,
-            order: [...state.basket.order, newItem],
-          },
-        };
-      }
+      state.basket.order.push(newItem);
       return {
         ...state,
         basket: {
+          order: state.basket.order,
           qtyItem: state.basket.order.length,
-          order: [...itemIncreased],
         },
         products: [...productsStockUpdated],
       };
@@ -94,9 +77,15 @@ const reducer = (state = initialState, action) => {
       return state;
 
     case "DEL_ITEM":
-      console.log(action.payload);
       state.basket.order.splice(action.payload, 1);
       sumOrders();
+      //increase product in stock
+      state.products.map((product) => {
+        if (product.id === action.payload.id) {
+          product.stock = product.stock + action.payload.qty;
+        }
+        return product;
+      });
       return {
         ...state,
         basket: {

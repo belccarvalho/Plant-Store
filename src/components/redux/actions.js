@@ -1,5 +1,5 @@
-export function add(id, name, price) {
-  return { type: "ADD_PRODUCT", payload: { id, name, price } };
+export function add(id, name, price, qty) {
+  return { type: "ADD_PRODUCT", payload: { id, name, price, qty } };
 }
 
 export function remove(id) {
@@ -24,9 +24,9 @@ export function sumOrders() {
     type: "SUM_ORDERS",
   };
 }
-export function deleteItem(index) {
+export function deleteItem(index, id, qty) {
   return {
     type: "DEL_ITEM",
-    payload: index,
+    payload: { index: index, id: id, qty: qty },
   };
 }
