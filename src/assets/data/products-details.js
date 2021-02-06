@@ -5,7 +5,7 @@ const products = [
     price: 11,
     image:
       "https://mk0newsiteviodqfcuwv.kinstacdn.com/wp-content/uploads/2020/10/Pilea_2-600x840.jpg",
-    stock: 2,
+    stock: 1,
   },
   {
     id: "g5t2",
@@ -21,7 +21,7 @@ const products = [
     price: 15,
     image:
       "https://mk0newsiteviodqfcuwv.kinstacdn.com/wp-content/uploads/2018/09/20200729-DSC_2666.jpg",
-    stock: 15,
+    stock: 10,
   },
   {
     id: "t48s",
@@ -29,7 +29,7 @@ const products = [
     price: 16,
     image:
       "https://mk0newsiteviodqfcuwv.kinstacdn.com/wp-content/uploads/2020/10/Ludisia_1-600x840.jpg",
-    stock: 8,
+    stock: 0,
   },
   {
     id: "d7h3",
@@ -77,7 +77,7 @@ const products = [
     price: 16,
     image:
       "https://mk0newsiteviodqfcuwv.kinstacdn.com/wp-content/uploads/2019/07/Plant-Circle_24-Jan-2020_Photo-by-Savannah-van-der-Niet-54.jpg",
-    stock: 9,
+    stock: 1,
   },
   {
     id: "5df0",
@@ -85,7 +85,7 @@ const products = [
     price: 16,
     image:
       "https://mk0newsiteviodqfcuwv.kinstacdn.com/wp-content/uploads/2019/09/Plant-Circle_24-October-2019-46.jpg",
-    stock: 15,
+    stock: 5,
   },
   {
     id: "9fn3",
@@ -93,7 +93,7 @@ const products = [
     price: 15,
     image:
       "https://mk0newsiteviodqfcuwv.kinstacdn.com/wp-content/uploads/2018/09/20200320-DSC_3360.jpg",
-    stock: 9,
+    stock: 8,
   },
 ];
 export default products;

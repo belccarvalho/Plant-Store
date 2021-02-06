@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
 import { Table } from "reactstrap";
 import x from "../../assets/images/noStock.png";
 import { deleteItem, sumOrders } from "../redux/actions";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 import Banner from "../Banner";
 export default function Orders() {
   const orders = useSelector((state) => state.basket.order);
@@ -18,8 +18,8 @@ export default function Orders() {
     } else {
       setIsBasketEmpty(false);
     }
-  }, [total]);
-  return isBasketEmpty ? (
+  }, [orders]);
+  return !isBasketEmpty ? (
     <div className='container col-6'>
       <Table className='justify-content-center mt-5 '>
         <thead style={{ color: "rgb(214,131,141)" }}>
@@ -46,6 +46,7 @@ export default function Orders() {
                     onClick={(e) => {
                       e.preventDefault();
                       dispatch(deleteItem(index));
+                      dispatch(sumOrders());
                     }}
                   ></img>
                 </td>
@@ -60,6 +61,9 @@ export default function Orders() {
           </tr>
         </tfoot>
       </Table>
+      <Link className='goShop' to='/buy'>
+        Buy →
+      </Link>
     </div>
   ) : (
     <Banner text='Your Cart is empty...'></Banner>

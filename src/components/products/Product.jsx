@@ -67,7 +67,7 @@ export default function Product(props) {
               type='number'
               value={qty}
             />
-            {soldOut ? (
+            {limit === 0 || soldOut ? (
               <img src={soldOutImg} alt='sold-out' id='sold-out'></img>
             ) : (
               <Button
@@ -91,6 +91,9 @@ export default function Product(props) {
               </Button>
             )}
           </div>
+          <Button className='col-2 addCart' onClick={() => {}}>
+            Add to Cart
+          </Button>
         </CardBody>
       </Card>
     </div>

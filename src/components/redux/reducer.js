@@ -1,4 +1,6 @@
 import products from "../../assets/data/products-details";
+import { sumOrders } from "./actions";
+import { useDispatch } from "react-redux";
 const initialState = {
   basket: { qtyItem: 0, order: [], total: 0 },
   products: products,
@@ -64,6 +66,7 @@ const reducer = (state = initialState, action) => {
             }
           }
         }
+        sumOrders();
         return item;
       });
 
@@ -79,36 +82,30 @@ const reducer = (state = initialState, action) => {
     case "SUM_ORDERS":
       let partialSum;
       let sum = [];
+      state.basket.total = 0;
       const reducer = (accumulator, currentValue) => accumulator + currentValue;
       state.basket.order.map((item) => {
         partialSum = item.price * item.quantity;
         sum = [...sum, partialSum];
         return sum;
       });
-      state.basket.total = sum.reduce(reducer);
+      if (state.basket.order.length > 0) {
+        state.basket.total = sum.reduce(reducer);
+      }
       return state;
 
     case "DEL_ITEM":
-      if (state.basket.order.length > 1) {
-        return {
-          ...state,
-          basket: {
-            order: state.basket.order.splice(action.payload, 1),
-            qtyItem: state.basket.order.length,
-            total: state.basket.total,
-          },
-        };
-      } else {
-        console.log(state.basket.order[action.payload]);
-        return {
-          ...state,
-          basket: {
-            order: [],
-            qtyItem: 0,
-            total: 0,
-          },
-        };
-      }
+      console.log(action.payload);
+      state.basket.order.splice(action.payload, 1);
+      sumOrders();
+      return {
+        ...state,
+        basket: {
+          order: state.basket.order,
+          qtyItem: state.basket.order.length,
+          total: state.basket.total,
+        },
+      };
 
     default:
       return state;
