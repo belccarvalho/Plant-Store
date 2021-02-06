@@ -75,7 +75,19 @@ ul {
 
 .navbar-toggler {
   border: 3px solid var(--pink) !important;
-  border-radius: 10px;
+  border-radius: 0.25rem;
+}
+.contact {
+  display: block;
+}
+.contact a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: 2em;
+}
+.contact a:hover {
+  font-weight: bolder;
 }
 /* END OF NAVBAR */
 /* DISCLAIMER */
@@ -180,16 +192,17 @@ ul {
   color: var(--pink);
 }
 .goShop {
-  background-color: var(--lightGreen);
+  background-color: var(--pink);
   margin-top: 2rem;
   padding: 0.5em;
   color: var(--white) !important;
   align-self: center;
   font-size: 2rem;
+  border-radius: 0.25rem;
 }
 .goShop:hover {
   text-decoration: none;
-  background-color: rgb(155, 182, 100);
+  background-color: var(--darkPink);
 }
 #delete {
   width: 1.2em;
@@ -206,7 +219,7 @@ footer {
   display: flex;
   justify-content: center;
   background-color: var(--lightGreen);
-  font-size: 15px;
+  font-size: 1.5rem;
   position: fixed;
   width: 100%;
   bottom: 0;

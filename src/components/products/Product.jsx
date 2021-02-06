@@ -12,7 +12,7 @@ import {
   ModalBody,
 } from "reactstrap";
 import { useSelector, useDispatch } from "react-redux";
-import { remove, add, sumOrders } from "../redux/actions";
+import { add, sumOrders } from "../redux/actions";
 import { TiShoppingCart } from "react-icons/ti";
 import soldOutImg from "../../assets/images/soldout.png";
 

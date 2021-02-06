@@ -12,6 +12,7 @@ import { TiShoppingCart } from "react-icons/ti";
 import { RiPlantFill } from "react-icons/ri";
 import Main from "./Main";
 import Banner from "./Banner";
+import Contact from "./Contact";
 import ListOfProducts from "./products/ListOfProducts.jsx";
 import Cart from "./Cart.jsx";
 import Buy from "./Buy";
@@ -44,6 +45,8 @@ export default function NavbarDisplay() {
               <Link className='nav-link' to='/shop'>
                 Shop
               </Link>
+            </NavItem>
+            <NavItem tag='h4'>
               <Link className='nav-link' to='/contact'>
                 Contact
               </Link>
@@ -68,7 +71,9 @@ export default function NavbarDisplay() {
         <Route path='/cart'>
           <Cart />
         </Route>
-        <Route path='/contact'></Route>
+        <Route path='/contact'>
+          <Contact />
+        </Route>
         <Route path='/buy'>
           <Buy />
         </Route>
