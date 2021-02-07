@@ -95,11 +95,11 @@ ul {
   margin: 1em auto;
   padding: 1em;
   text-align: center;
-  font-weight: 400;
-  font-size: 1.5rem;
+  font-weight: 300;
+  font-size: 1rem;
 }
 .disclaimer span {
-  font-weight: 700;
+  font-weight: 500;
 }
 /* END OF  DISCLAIMER */
 /* LIST OF PRODUCTS */
@@ -243,11 +243,11 @@ footer {
   display: flex;
   justify-content: center;
   background-color: var(--lightGreen);
-  font-size: 1.5rem;
+  font-size: 1rem;
   position: fixed;
   width: 100%;
   bottom: 0;
-  padding: 2rem;
+  padding: 1rem;
 }
 footer p {
   margin: 0;
@@ -291,6 +291,17 @@ footer p > a:hover {
 @media only screen and (min-width: 768px) {
   .collapse {
     display: block;
+  }
+  .disclaimer {
+    font-weight: 400;
+    font-size: 1.5rem;
+  }
+  .disclaimer span {
+    font-weight: 700;
+  }
+  footer {
+    font-size: 1.5rem;
+    padding: 2rem;
   }
   .cardEmpty {
     padding: 5rem 0 19rem 0;
