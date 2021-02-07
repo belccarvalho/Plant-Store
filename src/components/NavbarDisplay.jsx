@@ -10,7 +10,7 @@ import {
 } from "reactstrap";
 import { TiShoppingCart } from "react-icons/ti";
 import { RiPlantFill } from "react-icons/ri";
-import Main from "./Main";
+import Disclaimer from "./Disclaimer";
 import Banner from "./Banner";
 import Contact from "./Contact";
 import ListOfProducts from "./products/ListOfProducts.jsx";
@@ -60,7 +60,7 @@ export default function NavbarDisplay() {
           </Link>
         </Collapse>
       </Navbar>
-      <Main />
+      <Disclaimer />
       <Switch>
         <Route path='/home'>
           <Banner text='Welcome, We are happy you are here =)'></Banner>

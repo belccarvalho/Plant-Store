@@ -20,7 +20,7 @@ export default function Cart() {
     }
   }, [orders]);
   return !isBasketEmpty ? (
-    <div className='container col-6'>
+    <div className='container  col-sm-10 col-md-8 col-lg-6 cart'>
       <Table className='justify-content-center mt-5 '>
         <thead style={{ color: "rgb(214,131,141)" }}>
           <tr>
@@ -28,6 +28,7 @@ export default function Cart() {
             <th>Product</th>
             <th>Qty</th>
             <th>Price</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>

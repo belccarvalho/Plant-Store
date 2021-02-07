@@ -13,7 +13,7 @@ const products = [
     price: 9,
     image:
       "https://mk0newsiteviodqfcuwv.kinstacdn.com/wp-content/uploads/2020/10/20201022-_DSC0635-1.jpg",
-    stock: 3,
+    stock: 12,
   },
   {
     id: "js48",
@@ -64,12 +64,12 @@ const products = [
     stock: 4,
   },
   {
-    id: "d7vf",
-    name: "Zirkus Topf",
-    price: 63.5,
+    id: "9fn3",
+    name: "Begonia Maculata",
+    price: 15,
     image:
-      "https://mk0newsiteviodqfcuwv.kinstacdn.com/wp-content/uploads/2019/07/Plant-Circle_30-May-2019_Photo-by-Savannah-van-der-Niet-35-2.jpg",
-    stock: 12,
+      "https://mk0newsiteviodqfcuwv.kinstacdn.com/wp-content/uploads/2018/09/20200320-DSC_3360.jpg",
+    stock: 8,
   },
   {
     id: "d52s",
@@ -88,12 +88,12 @@ const products = [
     stock: 5,
   },
   {
-    id: "9fn3",
-    name: "Begonia Maculata",
-    price: 15,
+    id: "d7vf",
+    name: "Zirkus Topf",
+    price: 63.5,
     image:
-      "https://mk0newsiteviodqfcuwv.kinstacdn.com/wp-content/uploads/2018/09/20200320-DSC_3360.jpg",
-    stock: 8,
+      "https://mk0newsiteviodqfcuwv.kinstacdn.com/wp-content/uploads/2019/07/Plant-Circle_30-May-2019_Photo-by-Savannah-van-der-Niet-35-2.jpg",
+    stock: 12,
   },
 ];
 export default products;

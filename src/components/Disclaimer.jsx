@@ -1,7 +1,7 @@
 import React from "react";
 import { FaReact } from "react-icons/fa";
 import { SiRedux } from "react-icons/si";
-export default function Main() {
+export default function Disclaimer() {
   return (
     <div>
       <p className='disclaimer'>

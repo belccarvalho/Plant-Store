@@ -83,7 +83,7 @@ ul {
   display: block;
   text-decoration: none;
   color: inherit;
-  font-size: 2em;
+  font-size: 1rem;
 }
 .contact a:hover {
   font-weight: bolder;
@@ -102,6 +102,11 @@ ul {
   font-weight: 500;
 }
 /* END OF  DISCLAIMER */
+/* BANNER */
+.Banner {
+  margin-bottom: 4rem;
+}
+/* END OF BANNER */
 /* LIST OF PRODUCTS */
 
 .display-products {
@@ -113,7 +118,7 @@ ul {
 /* END OF LIST OF PRODUCTS */
 /* PRODUCT */
 .cardWrapper {
-  grid-gap: 3em;
+  grid-gap: 1em;
 }
 .card {
   background-color: var(--white);
@@ -150,6 +155,12 @@ ul {
 .addCart:hover {
   background-color: var(--darkPink);
 }
+.cart {
+  margin-bottom: 4rem;
+}
+.cart .goShop {
+  float: right;
+}
 #sold-out {
   height: 1.7rem;
   width: 2.6rem;
@@ -180,7 +191,7 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 8rem 0;
+  padding: 8rem 0 4rem;
   margin: 5rem auto;
   background: url("./assets/images/4cactus.jpeg") center/cover no-repeat;
   min-height: calc(70vh - 10px);
@@ -223,6 +234,7 @@ ul {
   grid-gap: 1em;
   justify-content: center;
   align-content: center;
+  margin-bottom: 6rem;
 }
 .contact section {
   padding: 2em;
@@ -300,32 +312,40 @@ footer p > a:hover {
   .disclaimer span {
     font-weight: 700;
   }
-  .display-products {
+  .cardEmpty,
+  .display-products,
+  .contact,
+  .Banner,
+  .cart {
     margin-bottom: 6rem;
   }
-}
-.cardEmpty {
-  padding: 5rem 0 19rem 0;
-}
-.cardWrapper {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto;
-  margin: 2em;
-}
-h5 {
-  font-size: 14px;
-}
-footer {
-  font-size: 1.3rem;
-  padding: 2rem;
-}
 
+  .contact a {
+    font-size: 1.4rem;
+  }
+  .cardEmpty {
+  }
+  .cardWrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 2em;
+    margin: 2em;
+  }
+  h5 {
+    font-size: 14px;
+  }
+  footer {
+    font-size: 1.3rem;
+    padding: 2rem;
+  }
+}
 @media only screen and (min-width: 1024px) {
   .cardWrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
+    grid-gap: 3em;
   }
 }
 
