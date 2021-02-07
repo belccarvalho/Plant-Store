@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Online_Shop/static/css/main.5440efca.chunk.css",
+    "main.css": "/Online_Shop/static/css/main.dce37970.chunk.css",
     "main.js": "/Online_Shop/static/js/main.4306547b.chunk.js",
     "main.js.map": "/Online_Shop/static/js/main.4306547b.chunk.js.map",
     "runtime-main.js": "/Online_Shop/static/js/runtime-main.81222118.js",
@@ -8,7 +8,7 @@
     "static/js/2.a2307e66.chunk.js": "/Online_Shop/static/js/2.a2307e66.chunk.js",
     "static/js/2.a2307e66.chunk.js.map": "/Online_Shop/static/js/2.a2307e66.chunk.js.map",
     "index.html": "/Online_Shop/index.html",
-    "static/css/main.5440efca.chunk.css.map": "/Online_Shop/static/css/main.5440efca.chunk.css.map",
+    "static/css/main.dce37970.chunk.css.map": "/Online_Shop/static/css/main.dce37970.chunk.css.map",
     "static/js/2.a2307e66.chunk.js.LICENSE.txt": "/Online_Shop/static/js/2.a2307e66.chunk.js.LICENSE.txt",
     "static/media/index.css": "/Online_Shop/static/media/working.5cca18cf.jpg",
     "static/media/noStock.4c92d5ce.png": "/Online_Shop/static/media/noStock.4c92d5ce.png",
@@ -17,7 +17,7 @@
   "entrypoints": [
     "static/js/runtime-main.81222118.js",
     "static/js/2.a2307e66.chunk.js",
-    "static/css/main.5440efca.chunk.css",
+    "static/css/main.dce37970.chunk.css",
     "static/js/main.4306547b.chunk.js"
   ]
 }
