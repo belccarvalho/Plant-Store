@@ -319,7 +319,7 @@ footer p > a:hover {
     margin-bottom: 7rem;
   }
   .cardEmpty {
-    min-height: calc(70vh - 10px);
+    min-height: calc(65vh - 10px);
     max-width: 50vw;
     font-weight: 900;
   }
