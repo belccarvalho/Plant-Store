@@ -190,8 +190,8 @@ ul {
 .cardEmpty {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  padding: 8rem 0 4rem;
+  justify-content: center;
+  /* padding: 8rem 0 7rem; */
   margin: 5rem auto;
   background: url("./assets/images/4cactus.jpeg") center/cover no-repeat;
   min-height: calc(70vh - 10px);
@@ -317,14 +317,13 @@ footer p > a:hover {
   .contact,
   .Banner,
   .cart {
-    margin-bottom: 6rem;
+    margin-bottom: 7rem;
   }
 
   .contact a {
     font-size: 1.4rem;
   }
-  .cardEmpty {
-  }
+
   .cardWrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
