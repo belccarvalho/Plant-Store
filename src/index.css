@@ -191,25 +191,24 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* padding: 8rem 0 7rem; */
-  margin: 5rem auto;
+  margin: auto;
   background: url("./assets/images/4cactus.jpeg") center/cover no-repeat;
-  min-height: calc(70vh - 10px);
-  min-height: 70vh;
+  min-height: calc(60vh - 10px);
+  max-width: 80vw;
   border: var(--lightGreen) solid 3px;
   box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.2),
     -3px -3px 7px rgba(255, 255, 255, 0.4);
   text-align: center;
-  font-weight: 900;
+  font-weight: 600;
   color: var(--pink);
 }
 .goShop {
   background-color: var(--pink);
-  margin-top: 2rem;
+  margin-top: 1rem;
   padding: 0.5em;
   color: var(--white) !important;
   align-self: center;
-  font-size: 2rem;
+  font-size: 1rem;
   border-radius: 0.25rem;
 }
 .goShop:hover {
@@ -319,7 +318,15 @@ footer p > a:hover {
   .cart {
     margin-bottom: 7rem;
   }
-
+  .cardEmpty {
+    min-height: calc(70vh - 10px);
+    max-width: 50vw;
+    font-weight: 900;
+  }
+  .goShop {
+    margin-top: 2rem;
+    font-size: 2rem;
+  }
   .contact a {
     font-size: 1.4rem;
   }
