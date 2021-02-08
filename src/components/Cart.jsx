@@ -9,17 +9,9 @@ import Banner from "./Banner";
 export default function Cart() {
   const orders = useSelector((state) => state.basket.order);
   const total = useSelector((state) => state.basket.total);
-  const [isBasketEmpty, setIsBasketEmpty] = useState(true);
 
   const dispatch = useDispatch();
-  useEffect(() => {
-    if (orders === []) {
-      setIsBasketEmpty(true);
-    } else {
-      setIsBasketEmpty(false);
-    }
-  }, [orders]);
-  return !isBasketEmpty ? (
+  return total !== 0 ? (
     <div className='container  col-sm-10 col-md-8 col-lg-6 cart'>
       <Table className='justify-content-center mt-5 '>
         <thead style={{ color: "rgb(214,131,141)" }}>
