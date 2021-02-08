@@ -63,10 +63,7 @@ export default function NavbarDisplay() {
       <Disclaimer />
       <Switch>
         <Route path='/home'>
-          <Banner
-            className='Banner'
-            text='Welcome, We are happy you are here =)'
-          ></Banner>
+          <Banner text='Welcome, We are happy you are here =)'></Banner>
         </Route>
         <Route path='/shop'>
           <ListOfProducts />

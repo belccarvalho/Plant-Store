@@ -59,6 +59,6 @@ export default function Cart() {
       </Link>
     </div>
   ) : (
-    <Banner className='Banner' text='Your Cart is empty...'></Banner>
+    <Banner text='Your Cart is empty...'></Banner>
   );
 }
