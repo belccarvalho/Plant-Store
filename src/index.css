@@ -128,6 +128,9 @@ ul {
   border-radius: 0.25rem;
   color: white;
 }
+.cart {
+  margin-bottom: 4rem;
+}
 .card-body .addCart {
   background-color: var(--pink);
   border-radius: 0.25rem;
@@ -172,7 +175,10 @@ ul {
 }
 /* END OF PRODUCT */
 /* CART */
-.cardEmpty {
+.cart {
+  margin-bottom: 10rem;
+}
+.cartEmpty {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -188,7 +194,7 @@ ul {
   color: var(--pink);
   margin-bottom: 4rem;
 }
-.cardEmpty h2 {
+.cartEmpty h2 {
   font-size: 1.3rem;
 }
 .goShop {
@@ -335,18 +341,18 @@ footer p > a:hover {
   .disclaimer span {
     font-weight: 700;
   }
-  .cardEmpty,
+  .cartEmpty,
   .display-products,
   .contact,
   .cart {
     margin-bottom: 7rem;
   }
-  .cardEmpty {
+  .cartEmpty {
     min-height: calc(65vh - 10px);
     max-width: 50vw;
     font-weight: 900;
   }
-  .cardEmpty h2 {
+  .cartEmpty h2 {
     font-size: 2.5rem;
   }
   .goShop {
