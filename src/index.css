@@ -91,11 +91,6 @@ ul {
   font-weight: 500;
 }
 /* END OF  DISCLAIMER */
-/* BANNER */
-.Banner {
-  margin-bottom: 4rem;
-}
-/* END OF BANNER */
 /* LIST OF PRODUCTS */
 
 .display-products {
@@ -189,6 +184,7 @@ ul {
   text-align: center;
   font-weight: 600;
   color: var(--pink);
+  margin-bottom: 4rem;
 }
 .cardEmpty h2 {
   font-size: 1.3rem;
@@ -340,7 +336,6 @@ footer p > a:hover {
   .cardEmpty,
   .display-products,
   .contact,
-  .Banner,
   .cart {
     margin-bottom: 7rem;
   }
