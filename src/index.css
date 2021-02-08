@@ -77,18 +77,7 @@ ul {
   border: 3px solid var(--pink) !important;
   border-radius: 0.25rem;
 }
-/* CONTACT */
 
-.contact a {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-  font-size: 1rem;
-}
-.contact a:hover {
-  font-weight: bolder;
-}
-/* END CONTACT */
 /* END OF NAVBAR */
 /* DISCLAIMER */
 .disclaimer {
@@ -202,6 +191,9 @@ ul {
   font-weight: 600;
   color: var(--pink);
 }
+.cardEmpty h2 {
+  font-size: 1.3rem;
+}
 .goShop {
   background-color: var(--pink);
   margin-top: 1rem;
@@ -241,13 +233,22 @@ ul {
   box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.2),
     -3px -3px 7px rgba(255, 255, 255, 0.4);
 }
-.contact h1 {
-  font-size: 5rem;
-  color: var(--darkPink);
+.contact a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: 1rem;
+}
+.contact a:hover {
+  font-weight: bolder;
 }
 .contact h2,
 .contact h1 {
   text-align: center;
+}
+.contact h1 {
+  font-size: 5rem;
+  color: var(--darkPink);
 }
 /* END OF CONTACT */
 /* FOOTER */
@@ -322,6 +323,9 @@ footer p > a:hover {
     min-height: calc(65vh - 10px);
     max-width: 50vw;
     font-weight: 900;
+  }
+  .cardEmpty h2 {
+    font-size: 2.5rem;
   }
   .goShop {
     margin-top: 2rem;
