@@ -37,10 +37,10 @@ code {
   margin: 0;
   align-self: flex-end;
 }
-.collapse {
+/* .collapse {
   display: flex;
   justify-content: space-between;
-}
+} */
 ul {
   justify-content: flex-end;
 }
@@ -156,7 +156,6 @@ ul {
   align-self: center;
 }
 /* MODAL */
-
 .modal-content {
   width: 100%;
   border: var(--lightGreen) solid 3px;
@@ -302,8 +301,34 @@ footer p > a:hover {
 }
 
 @media only screen and (min-width: 768px) {
+  .navbar-brand {
+    display: inline-flex;
+    align-content: baseline;
+  }
+  .navbar-brand p {
+    font-size: 2rem;
+    color: var(--pink);
+    margin: 0;
+    align-self: flex-end;
+  }
   .collapse {
-    display: block;
+    display: flex;
+    justify-content: space-between;
+  }
+  ul {
+    justify-content: flex-end;
+  }
+  .nav-link {
+    color: var(--pink) !important;
+    margin-left: 2em;
+    justify-content: start;
+  }
+  .basket {
+    display: inline-flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 1.3rem;
+    margin: 0;
   }
   .disclaimer {
     font-weight: 400;

@@ -3,7 +3,7 @@ import { FaLinkedin, FaGithub, FaPhoneAlt, FaHome } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 export default function Contact() {
   return (
-    <article className='contact col-sm-10 col-8 container'>
+    <article className='contact col-sm-9 col-8 container'>
       <h1>Isabel Costa</h1>
       <section>
         <h2>Address</h2>
