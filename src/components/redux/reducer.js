@@ -77,7 +77,7 @@ const reducer = (state = initialState, action) => {
       return state;
 
     case "DEL_ITEM":
-      state.basket.order.splice(action.payload, 1);
+      state.basket.order.splice(action.payload.index, 1);
       sumOrders();
       //increase product in stock
       state.products.map((product) => {

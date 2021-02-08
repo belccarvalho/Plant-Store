@@ -65,12 +65,10 @@ ul {
 }
 .basket span:hover {
   color: var(--darkPink);
-  font-size: 3.8rem;
+  font-weight: 900;
 }
 .nav-link:hover {
-  color: var(--darkPink);
-  font-size: 1.4rem;
-  font-weight: bolder;
+  text-decoration: underline;
 }
 
 .navbar-toggler {
@@ -118,6 +116,7 @@ ul {
 }
 .card-img-top {
   object-fit: contain;
+  cursor: pointer;
 }
 
 .input {
@@ -163,8 +162,11 @@ ul {
 .modal-title {
   font-size: 3rem;
 }
+.modal-body {
+  display: flex;
+  justify-content: center;
+}
 .modal-body img {
-  align-self: center;
   width: 90%;
   height: 90%;
 }
