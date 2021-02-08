@@ -14,6 +14,10 @@ This project is mock-up of an online-shop which was done during the one-year Web
 
 <img src="./readme_files/cart.png" width=100%>
 
+### Add Product to Cart
+
+<img align="center" src="https://github.com/belcosta/Online_Shop/tree/master/Readme_files/buy.gif" width=100%>
+
 ### Remove Items from Cart
 
 <img align="center" src="https://github.com/belcosta/Online_Shop/tree/master/Readme_files/deleteItem.gif" width=100%>
