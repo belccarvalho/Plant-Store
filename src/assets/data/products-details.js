@@ -29,7 +29,7 @@ const products = [
     price: 16,
     image:
       "https://mk0newsiteviodqfcuwv.kinstacdn.com/wp-content/uploads/2020/10/Ludisia_1-600x840.jpg",
-    stock: 0,
+    stock: 5,
   },
   {
     id: "d7h3",
@@ -61,7 +61,7 @@ const products = [
     price: 18,
     image:
       "https://mk0newsiteviodqfcuwv.kinstacdn.com/wp-content/uploads/2018/09/Plant-Circle_28-02-20_Photo-by-Savannah-van-der-Niet-5.jpg",
-    stock: 4,
+    stock: 0,
   },
   {
     id: "9fn3",
