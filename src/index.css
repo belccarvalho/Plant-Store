@@ -213,6 +213,7 @@ ul {
 #delete {
   width: 1.2em;
   height: 1.2em;
+  cursor: pointer;
 }
 .sum {
   font-weight: 700;

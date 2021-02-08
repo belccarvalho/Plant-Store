@@ -14,6 +14,12 @@ This project is mock-up of an online-shop which was done during the one-year Web
 
 <img src="./readme_files/cart.png" width=100%>
 
-### Responsive Webdesign
+### Remove Items from Cart
 
-<img align="center" src="https://github.com/belcosta/Photos-Search/blob/main/README_files/responsiveness.gif" width=80%>
+<img align="center" src="https://github.com/belcosta/Online_Shop/tree/master/Readme_files/deleteItem.gif" width=100%>
+
+### Stock control → Display "SoldOut"
+
+<img align="center" src="https://github.com/belcosta/Online_Shop/tree/master/Readme_files/soldOut.gif" width=50%>
+
+### Responsive Webdesign
