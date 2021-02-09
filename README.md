@@ -2,7 +2,7 @@
 
 This is a mock-up of an online-shop developed during a one-year Web Development course
 
-<img src="./readme_files/navbar.png" width=100%>
+<img src="https://github.com/belcosta/Online_Shop/blob/master/Readme_files/navbar.png" width=100%>
 
 Click [here](https://belcosta.github.io/Online_Shop/) to access the page!
 
@@ -12,7 +12,7 @@ This project is mock-up of an online-shop which was done during the one-year Web
 
 - React - Redux - React Hooks - ReactStrap - Bootstrap
 
-<img src="./readme_files/cart.png" width=100%>
+<img src="https://github.com/belcosta/Online_Shop/blob/master/Readme_files/cart.png" width=100%>
 
 ### Add Product to Cart
 
