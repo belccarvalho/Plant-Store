@@ -24,6 +24,6 @@ This project is mock-up of an online-shop which was done during the one-year Web
 
 ### Stock control → Display "SoldOut"
 
-<img align="center" src="https://github.com/belcosta/Online_Shop/blob/master/Readme_files/soldOut.gif" width=30%>
+<img align="center" src="https://github.com/belcosta/Online_Shop/blob/master/Readme_files/soldOut.gif" width=20%>
 
 ### Responsive Webdesign

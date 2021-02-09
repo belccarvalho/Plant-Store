@@ -5,7 +5,7 @@ const products = [
     price: 11,
     image:
       "https://mk0newsiteviodqfcuwv.kinstacdn.com/wp-content/uploads/2020/10/Pilea_2-600x840.jpg",
-    stock: 1,
+    stock: 3,
   },
   {
     id: "g5t2",
@@ -77,7 +77,7 @@ const products = [
     price: 16,
     image:
       "https://mk0newsiteviodqfcuwv.kinstacdn.com/wp-content/uploads/2019/07/Plant-Circle_24-Jan-2020_Photo-by-Savannah-van-der-Niet-54.jpg",
-    stock: 1,
+    stock: 3,
   },
   {
     id: "5df0",
