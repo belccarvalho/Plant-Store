@@ -12,7 +12,7 @@ This project is mock-up of an online-shop which was done during the one-year Web
 
 - React - Redux - React Hooks - ReactStrap - Bootstrap
 
-<img src="hhttps://github.com/belcosta/Online_Shop/blob/master/Readme_files/cart.png" width=60%>
+<img src="hhttps://github.com/belcosta/Online_Shop/blob/master/Readme_files/cart.png" width=65%>
 
 ### Add Product to Cart
 
