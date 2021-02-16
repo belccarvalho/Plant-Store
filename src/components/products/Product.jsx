@@ -90,6 +90,7 @@ export default function Product(props) {
           </div>
           <Button
             className='col-2 addCart'
+            disabled={qty > 0 ? false : true}
             onClick={() => {
               dispatch(
                 add(
