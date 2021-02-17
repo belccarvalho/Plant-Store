@@ -9,7 +9,6 @@ import {
   NavItem,
 } from "reactstrap";
 import { TiShoppingCart } from "react-icons/ti";
-import { RiPlantFill } from "react-icons/ri";
 import Disclaimer from "./Disclaimer";
 import Banner from "./Banner";
 import Contact from "./Contact";
@@ -27,10 +26,8 @@ export default function NavbarDisplay() {
     <Router>
       <Navbar className='navbar' light expand='md'>
         <NavbarBrand className='col-3' href='/home'>
-          <RiPlantFill
-            style={{ color: "var(--pink)", width: "4rem", height: "4rem" }}
-          />
-          {"  "}
+          <img src='https://img.icons8.com/ios-filled/100/9F4C5B/potted-plant.png' />
+          {"   "}
           <p>Online-Shop</p>
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />

@@ -31,16 +31,21 @@ code {
   display: inline-flex;
   align-content: baseline;
 }
+.navbar-brand img {
+  height: 2rem;
+  width: 2rem;
+}
 .navbar-brand p {
-  font-size: 2rem;
+  font-size: 1.3rem;
   color: var(--pink);
   margin: 0;
   align-self: flex-end;
 }
-/* .collapse {
-  display: flex;
-  justify-content: space-between;
-} */
+.navbar-collapse ul {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(3, 1fr);
+}
 ul {
   justify-content: flex-end;
 }
@@ -48,6 +53,7 @@ ul {
   color: var(--pink) !important;
   margin-left: 2em;
   justify-content: start;
+  font-size: 1.1rem;
 }
 .basket {
   display: inline-flex;
@@ -74,6 +80,7 @@ ul {
 .navbar-toggler {
   border: 3px solid var(--pink) !important;
   border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
 }
 
 /* END OF NAVBAR */
@@ -313,6 +320,9 @@ footer p > a:hover {
   h4 {
     font-size: 20px;
   }
+  .navbar-brand p {
+    font-size: 1.5rem;
+  }
   .img-photo-cart {
     width: 60px;
     height: 85px;
@@ -324,8 +334,12 @@ footer p > a:hover {
     display: inline-flex;
     align-content: baseline;
   }
+  .navbar-brand img {
+    height: 3rem;
+    width: 3rem;
+  }
   .navbar-brand p {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: var(--pink);
     margin: 0;
     align-self: flex-end;
@@ -341,6 +355,7 @@ footer p > a:hover {
     color: var(--pink) !important;
     margin-left: 2em;
     justify-content: start;
+    font-size: 1.3rem;
   }
   .basket {
     display: inline-flex;
