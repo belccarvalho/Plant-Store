@@ -59,11 +59,11 @@ ul {
   display: inline-flex;
   justify-content: center;
   align-content: center;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin: 0;
 }
 .basket span {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
 }
 .basket span:hover,
 .nav-link:hover {
@@ -364,6 +364,9 @@ footer p > a:hover {
     font-size: 1.3rem;
     margin: 0;
   }
+  .basket span {
+    font-size: 3rem;
+  }
   .disclaimer {
     font-weight: 400;
     font-size: 1.3rem;
@@ -422,6 +425,9 @@ footer p > a:hover {
   .img-photo-cart {
     width: 100px;
     height: 130px;
+  }
+  .basket span {
+    font-size: 3.5rem;
   }
 }
 
