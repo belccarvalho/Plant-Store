@@ -94,7 +94,7 @@ export default function Product(props) {
             onClick={() => {
               dispatch(
                 add(
-                  props.product.id,
+                  props.product.image,
                   props.product.name,
                   props.product.price,
                   qty

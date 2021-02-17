@@ -1,5 +1,5 @@
-export function add(id, name, price, qty) {
-  return { type: "ADD_PRODUCT", payload: { id, name, price, qty } };
+export function add(image, name, price, qty) {
+  return { type: "ADD_PRODUCT", payload: { image, name, price, qty } };
 }
 
 export function remove(id) {

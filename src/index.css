@@ -197,6 +197,10 @@ ul {
 .cartEmpty h2 {
   font-size: 1.3rem;
 }
+.img-photo-cart {
+  width: 40px;
+  height: 55px;
+}
 .goShop {
   background-color: var(--pink);
   margin-top: 1rem;
@@ -303,6 +307,10 @@ footer p > a:hover {
   h4 {
     font-size: 20px;
   }
+  .img-photo-cart {
+    width: 60px;
+    height: 85px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -348,6 +356,10 @@ footer p > a:hover {
   .cart {
     margin-bottom: 7rem;
   }
+  .img-photo-cart {
+    width: 80px;
+    height: 100px;
+  }
   .cartEmpty {
     min-height: calc(65vh - 10px);
     max-width: 50vw;
@@ -385,6 +397,10 @@ footer p > a:hover {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     grid-gap: 3em;
+  }
+  .img-photo-cart {
+    width: 100px;
+    height: 130px;
   }
 }
 

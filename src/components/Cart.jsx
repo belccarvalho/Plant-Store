@@ -16,7 +16,7 @@ export default function Cart() {
       <Table className='justify-content-center mt-5 '>
         <thead style={{ color: "rgb(214,131,141)" }}>
           <tr>
-            <th># id</th>
+            <th>#</th>
             <th>Product</th>
             <th>Qty</th>
             <th>Price</th>
@@ -27,7 +27,13 @@ export default function Cart() {
           {orders.map((item, index) => {
             return (
               <tr key={index}>
-                <td>{item.id}</td>
+                <td>
+                  <img
+                    src={item.image}
+                    alt='plant'
+                    className='img-photo-cart'
+                  />
+                </td>
                 <td>{item.title}</td>
                 <td>{item.quantity}</td>
                 <td>{item.price * item.quantity}€</td>

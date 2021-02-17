@@ -10,7 +10,7 @@ const reducer = (state = initialState, action) => {
     case "ADD_PRODUCT":
       //create object with some data from product in order to add to the basket order
       let newItem = {
-        id: action.payload.id,
+        image: action.payload.image,
         title: action.payload.name,
         price: action.payload.price,
         quantity: action.payload.qty,
