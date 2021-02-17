@@ -141,6 +141,12 @@ ul {
 .addCart:hover {
   background-color: var(--darkPink);
 }
+.table td {
+  vertical-align: baseline;
+}
+.table {
+  text-align: center;
+}
 .cart {
   margin-bottom: 4rem;
 }
