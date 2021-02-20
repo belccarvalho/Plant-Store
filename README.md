@@ -26,4 +26,4 @@ This project is mock-up of an online-shop which was done during the one-year Web
 
 <img align="center" src="https://github.com/belcosta/Online_Shop/blob/master/Readme_files/soldOut.gif" width=20%>
 
-### Responsive Webdesign
+### Responsive design
