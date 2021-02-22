@@ -24,32 +24,32 @@ export default function NavbarDisplay() {
 
   return (
     <Router>
-      <Navbar className='navbar' light expand='md'>
-        <NavbarBrand className='col-3' href='/home'>
-          <img src='https://img.icons8.com/ios-filled/100/9F4C5B/potted-plant.png' />
+      <Navbar className="navbar" light expand="md">
+        <NavbarBrand className="col-3" href="/home">
+          <img src="https://img.icons8.com/ios-filled/100/9F4C5B/potted-plant.png" />
           {"   "}
           <p>Online-Shop</p>
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
-          <Nav className=' col-10' navbar>
-            <NavItem tag='h4'>
-              <Link className='nav-link' to='/home'>
+          <Nav className=" col-10" navbar>
+            <NavItem tag="h4">
+              <Link className="nav-link" to="/home">
                 Home
               </Link>
             </NavItem>
-            <NavItem tag='h4'>
-              <Link className='nav-link' to='/shop'>
+            <NavItem tag="h4">
+              <Link className="nav-link" to="/shop">
                 Shop
               </Link>
             </NavItem>
-            <NavItem tag='h4'>
-              <Link className='nav-link' to='/contact'>
+            <NavItem tag="h4">
+              <Link className="nav-link" to="/contact">
                 Contact
               </Link>
             </NavItem>
           </Nav>
-          <Link className='col-2 nav-link basket' to='/cart'>
+          <Link className="col-2 nav-link basket" to="/cart">
             <span>
               <TiShoppingCart />
             </span>
@@ -59,19 +59,19 @@ export default function NavbarDisplay() {
       </Navbar>
       <Disclaimer />
       <Switch>
-        <Route path='/home'>
-          <Banner text='Welcome, We are happy you are here =)'></Banner>
+        <Route path="/home">
+          <Banner text="Welcome, We are happy you are here =)"></Banner>
         </Route>
-        <Route path='/shop'>
+        <Route path="/shop">
           <ListOfProducts />
         </Route>
-        <Route path='/cart'>
+        <Route path="/cart">
           <Cart />
         </Route>
-        <Route path='/contact'>
+        <Route path="/contact">
           <Contact />
         </Route>
-        <Route path='/buy'>
+        <Route path="/buy">
           <Buy />
         </Route>
       </Switch>

@@ -106,6 +106,7 @@ ul {
 }
 /* END OF LIST OF PRODUCTS */
 /* PRODUCT */
+
 .cardWrapper {
   grid-gap: 1em;
 }
@@ -142,8 +143,6 @@ ul {
   background-color: var(--pink);
   border-radius: 0.25rem;
   color: white;
-  margin: 1em;
-  max-width: 90%;
 }
 .addCart:hover {
   background-color: var(--darkPink);
@@ -160,9 +159,10 @@ ul {
 .cart .goShop {
   float: right;
 }
-#sold-out {
+.sold-out {
   height: 1.7rem;
   width: 2.6rem;
+  margin-top: 5px;
   align-self: center;
 }
 /* MODAL */
