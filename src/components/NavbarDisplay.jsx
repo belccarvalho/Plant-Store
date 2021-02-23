@@ -25,11 +25,11 @@ export default function NavbarDisplay() {
   return (
     <Router>
       <Navbar className="navbar" light expand="md">
-        <NavbarBrand className="col-3" href="/home">
+        <Link className="navbar-brand col-3" to="/home">
           <img src="https://img.icons8.com/ios-filled/100/9F4C5B/potted-plant.png" />
           {"   "}
           <p>Online-Shop</p>
-        </NavbarBrand>
+        </Link>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className=" col-10" navbar>
