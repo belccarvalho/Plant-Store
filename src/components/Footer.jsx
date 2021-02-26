@@ -7,17 +7,12 @@ export default function footer() {
       <footer>
         <p>
           Made by Isabel Costa{" "}
-          <a
-            href='https://github.com/belcosta'
-            target='_blank'
-            rel='noreferrer'
-          >
+          <a href="https://github.com/belcosta" target="_blank">
             <FaGithub />
           </a>{" "}
           <a
-            href='https://www.linkedin.com/in/belcosta-webdeveloper/'
-            target='_blank'
-            rel='noreferrer'
+            href="https://www.linkedin.com/in/belcosta-webdeveloper/"
+            target="_blank"
           >
             <FaLinkedin />
           </a>
